@@ -1,0 +1,79 @@
+<?php
+class Post
+{
+  private $db;
+
+  public function __construct()
+  {
+    $this->db = new Database;
+  }
+
+  public function getPosts()
+  {
+    $this->db->query('SELECT * FROM posts ORDER BY city_name DESC');
+
+    $results = $this->db->resultSet();
+
+    return $results;
+  }
+
+  public function getPostById($id){
+    $this->db->query('SELECT * FROM posts WHERE id = :id');
+    $this->db->bind(':id', $id);
+
+    $row = $this->db->single();
+
+    return $row;
+  }
+
+  // public function addPost($data)
+  // {
+  //   $this->db->query('INSERT INTO posts (city_name, user_id) VALUES(:city_name, :user_id)');
+  //   // Bind values
+  //   $this->db->bind(':city_name', $data['city_name']);
+  //   $this->db->bind(':user_id', $data['user_id']);
+
+  //   // Execute
+  //   if ($this->db->execute()) {
+  //     return true;
+  //   } else {
+  //     return false;
+  //   }
+  // }
+
+  // public function getPostsOrderedBy($orderBy, $direction)
+  // {
+  //   $this->db->query('SELECT * FROM posts ORDER BY '.$orderBy.' '.$direction);
+
+  //   $results = $this->db->resultSet();
+
+  //   return $results;
+  // }
+
+  // public function addWeatherCast($city)
+  // {
+  //   $urlContents = file_get_contents("http://api.openweathermap.org/data/2.5/weather?q=" . urlencode($city) . "&appid=0e90d55ef2c8bda36c2dbba529e73db4");
+  //   $weatherArray = json_decode($urlContents, true);
+
+  //   if ($weatherArray['cod'] == 200) {
+  //     return $weatherArray;
+  //   } else {
+  //     return false;
+  //   }
+  // }
+
+  // public function checkIfCountryExists($city)
+  // {
+  //   $upercaseCity = ucfirst($city);
+
+  //   $this->db->query("SELECT * FROM posts WHERE city_name = '{$upercaseCity}'");
+
+  //   $results = $this->db->resultSet();
+    
+  //   if ($results) {
+  //     return true;
+  //   } else {
+  //     return false;
+  //   }
+  // }
+}
