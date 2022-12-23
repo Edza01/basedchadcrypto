@@ -7,12 +7,11 @@
 
 
 
-
-  <div>
+  <div class="masonry">
     <?php foreach ($data['posts'] as $post) : ?>
 
-      <a href="<?php echo URLROOT; ?>/pages/show/<?php echo $post->id; ?>" class="post_image_card">
-        <img src='public/img/<?php echo $post->city_name; ?>' alt='<?php echo $post->city_name; ?>' class="post_image">
+      <a href="<?php echo URLROOT; ?>/pages/show/<?php echo $post->id; ?>" class="masonry-item">
+        <img src='public/img/<?php echo $post->city_name; ?>' alt='<?php echo $post->city_name; ?>'>
       </a>
 
     <?php endforeach; ?>
