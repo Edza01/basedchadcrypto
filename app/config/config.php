@@ -10,6 +10,6 @@
   // URL Root
   define('URLROOT', 'https://localhost/girlsclub');
   // Site Name
-  define('SITENAME', 'girlsclub');
+  define('SITENAME', 'myfreegirlclub');
   // App Version
   define('APPVERSION', '1.0.0');

@@ -5,11 +5,11 @@
 <div class="show-container">
     
     <br>
-    <h1><?php echo $data['pages']->city_name; ?></h1>
+    <h1 class="open-post-h1"><?php echo $data['pages']->city_name; ?></h1>
 
 
     <?php $full_size_img = $data['pages']->city_name; ?>
-    <img src="<?php echo URLROOT; ?>/public/img/<?php echo $full_size_img ?>" alt='<?php echo $full_size_img ?>'> 
+    <img src="<?php echo URLROOT; ?>/public/img/<?php echo $full_size_img ?>" alt='<?php echo $full_size_img ?>' class="open-post-image"> 
 
     <p>
         Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do

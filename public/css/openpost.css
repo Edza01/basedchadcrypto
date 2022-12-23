@@ -1,0 +1,15 @@
+.open-post-image {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.show-container {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.open-post-h1 {
+    text-align: center;
+}
