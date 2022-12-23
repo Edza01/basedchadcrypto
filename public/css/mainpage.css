@@ -2,3 +2,62 @@
     text-align: justify;
     font-size: 1rem;
 }
+
+.page-index {
+    
+}
+
+
+
+.pagination {
+    list-style: none;
+    display: inline-block;
+    padding: 0;
+    margin-top: 10px;
+  }
+  .pagination li {
+    display: inline;
+    text-align: center;
+  }
+  .pagination a {
+    float: left;
+    display: block;
+    font-size: 14px;
+    text-decoration: none;
+    padding: 5px 12px;
+    color: #fff;
+    margin-left: -1px;
+    border: 1px solid transparent;
+    line-height: 1.5;
+  }
+  .pagination a.active {
+    cursor: default;
+  }
+  .pagination a:active {
+    outline: none;
+  }
+  .modal-2 li:first-child a {
+    -moz-border-radius: 50px 0 0 50px;
+    -webkit-border-radius: 50px;
+    border-radius: 50px 0 0 50px;
+  }
+  .modal-2 li:last-child a {
+    -moz-border-radius: 0 50px 50px 0;
+    -webkit-border-radius: 0;
+    border-radius: 0 50px 50px 0;
+  }
+  .modal-2 a {
+    border-color: #ddd;
+    color: #999;
+    background: #fff;
+  }
+  .modal-2 a:hover {
+    color: #E34E48;
+    background-color: #eee;
+  }
+  .modal-2 a.active, .modal-2 a:active {
+    border-color: #E34E48;
+    background: #E34E48;
+    color: #fff;
+  }
+  

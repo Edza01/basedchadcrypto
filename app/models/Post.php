@@ -8,16 +8,17 @@ class Post
     $this->db = new Database;
   }
 
-  public function getPosts()
+  public function getPosts($offset = 0)
   {
-    $this->db->query('SELECT * FROM posts ORDER BY city_name DESC');
+    $this->db->query('SELECT * FROM posts ORDER BY created_at DESC LIMIT 10 OFFSET '. $offset);
 
     $results = $this->db->resultSet();
 
     return $results;
   }
 
-  public function getPostById($id){
+  public function getPostById($id)
+  {
     $this->db->query('SELECT * FROM posts WHERE id = :id');
     $this->db->bind(':id', $id);
 
@@ -25,6 +26,24 @@ class Post
 
     return $row;
   }
+
+  public function getPostCount()
+  {
+    $this->db->query('SELECT COUNT(*) as count FROM posts ORDER BY created_at DESC');
+
+    $results = $this->db->resultSet();
+
+    return $results;
+  }
+
+
+
+  
+
+
+ 
+
+
 
   // public function addPost($data)
   // {

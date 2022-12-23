@@ -15,7 +15,7 @@
 
 
 
-  <div class="jumbotron">
+  <!-- <div class="jumbotron">
     <h1 class="display-4">Myfreegirlclub</h1>
     <p class="lead main-text"><b>Welcome to Myfreegirlclub</b>, a place where you can indulge your love of all things feminine and beautiful. 
       Whether you're a fan of fashion, a lover of art, or simply enjoy admiring the female form, this website has something for you. 
@@ -36,7 +36,32 @@
       adore the female form, this website is sure to have something that will captivate and inspire you. So why wait? 
       Head on over to Girl Club and get your fix of fun and flirty females today!
     </p>
-  </div>
+  </div> -->
+
+
+
+
+  <?php
+  $total_posts_obj = $this->postModel->getPostCount();
+  $total_posts = $total_posts_obj[0]->{'count'};
+  $total_pages = ceil($total_posts / 10);
+  ?>
+
+  <ul class="pagination modal-2">
+    <li><a href="#" class="prev">&laquo </a></li>
+    <?php
+    for ($i = 0; $i < $total_pages; $i++) {
+      echo "<li><a class='page-index' href='?page=" . $i . "'>" . $i . "</a></li>";
+    }
+    ?>
+    <li><a href="#" class="next"> &raquo;</a></li>
+  </ul>
+
+
+
+
+
+
 
 
 </div>
