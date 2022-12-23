@@ -1,5 +1,5 @@
-$(".modal-2 li .page-index").click(function () {
-    $(".modal-2 li .page-index").removeClass("active");
+$(".pagination li .page-index").click(function () {
+    $(".pagination li .page-index").removeClass("active");
     $(this).addClass("active");
 
     localStorage.ClassName = "active";
@@ -11,7 +11,7 @@ $(document).ready(function () {
 });
 
 function SetClass() {
-    var listItems = $(".modal-2 li .page-index");
+    var listItems = $(".pagination li .page-index");
     listItems.each(function (idx, li) {
         var product = $(li);
 
@@ -23,8 +23,9 @@ function SetClass() {
 
 
 
+
 $(document).ready(function () {
-    var $lis = $(".modal-2 li .page-index").hide();
+    var $lis = $(".pagination li .page-index").hide();
     var size_li = $lis.length;
     var x = 7,
         start = 0;
@@ -60,4 +61,49 @@ $(document).ready(function () {
         localStorage.setItem("liPos", start);
       }
     });
+
+    $(".first-page").click(function() {
+      if (start - x >= 0) {
+        $lis.slice(start, start + x).hide();
+        start -= x;
+        $lis.slice(start, start + x).show();
+  
+        // Store the new position in local storage
+        localStorage.setItem("liPos", start);
+      }
+
+      $(".pagination li .page-index").removeClass("active");
+        localStorage.CurrentIndex = 0;
+    });
+
+    $(".first-page").click(function() {
+      if (start - x >= 0) {
+        $lis.slice(start, start + x).hide();
+        start -= x;
+        $lis.slice(start, start + x).show();
+  
+        // Store the new position in local storage
+        localStorage.setItem("liPos", start);
+      }
+
+      $(".pagination li .page-index").removeClass("active");
+        localStorage.CurrentIndex = 0;
+    });
+
+    $(".last-page").click(function() {
+      if (start + x < size_li) {
+        $lis.slice(start, start + x).hide();
+        start += x;
+        $lis.slice(start, start + x).show();
+  
+        // Store the new position in local storage
+        localStorage.setItem("liPos", start);
+      }
+
+      $(".pagination li .page-index").removeClass("active");
+        localStorage.CurrentIndex = $(".pagination li").length -3;
+    });
+
   });
+
+  console.log($(".pagination li").length -3);

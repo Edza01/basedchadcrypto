@@ -10,7 +10,7 @@ class Post
 
   public function getPosts($offset = 0)
   {
-    $this->db->query('SELECT * FROM posts ORDER BY created_at DESC LIMIT 10 OFFSET '. $offset);
+    $this->db->query('SELECT * FROM posts ORDER BY created_at DESC LIMIT 24 OFFSET '. $offset);
 
     $results = $this->db->resultSet();
 

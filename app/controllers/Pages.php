@@ -13,7 +13,7 @@ class Pages extends Controller
     {
       $page = $_GET['page'];
 
-      $posts = $this->postModel->getPosts($page * 10);
+      $posts = $this->postModel->getPosts($page * 24);
 
         $data = [
           'posts' => $posts
