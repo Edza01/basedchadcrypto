@@ -13,35 +13,52 @@
   </div>
 
 
-  <?php
-  $total_posts_obj = $this->postModel->getPostCount();
-  $total_posts = $total_posts_obj[0]->{'count'};
-  $total_pages = ceil($total_posts / 24);
-  ?>
 
-  <div class="pagination-container">
 
-    <a class="first-page" href="?page=0"> <i class="fa-solid fa-backward fa-xl"></i> </a>
 
+
+
+
+  
+<?php 
+    $total_posts_obj = $this->postModel->getPostCount();
+    $total_posts = $total_posts_obj[0]->{'count'};
+    $total_pages = ceil($total_posts / 24);
+
+
+    $page = $_GET['page'];
+    ?>
+    
     <ul class="pagination">
-      <li><a href="#" class="prev">Prev</a></li>
-      <?php
-      for ($i = 0; $i < $total_pages; $i++) {
-        echo "<li><a class='page-index' href='?page=" . $i . "'>" . $i . "</a></li>";
-      }
+      <?php 
+        if($page>1)
+        {
+            echo "<li><a class='prev' href='?page=".($page-1)."' class='btn btn-danger'>Previous</a></li>";
+        }
+
+        for($i=1;$i<$total_pages;$i++)
+        {
+            echo "<li><a class='page-index' href='?page=".$i."' class='btn btn-primary'>$i</a></li>";
+        }
+
+        if($i>$page)
+        {
+            echo "<li><a class='next' href='?page=".($page+1)."' class='btn btn-danger'>Next</a></li>";
+        }
       ?>
-      <li><a href="#" class="next">Next</a></li>
     </ul>
 
-    <a class="last-page" href="'?page=<?php echo $total_pages-1 ?>"> <i class="fa-solid fa-forward fa-xl	"></i> </a>
 
-  </div>
+    
+
+
+
 
 
 
 
   <div class="jumbotron">
-    <h1 class="display-4">Myfreegirlclub</h1>
+    <h1 class="display-4">MyFreeGirlsClub</h1>
     <p class="lead main-text"><b>Welcome to MyFreeGirlClub</b>, a place where you can indulge your love of all things feminine and beautiful.
       Whether you're a fan of fashion, a lover of art, or simply enjoy admiring the female form, this website has something for you.
       With a diverse selection of gorgeous gals from around the world, you'll be able to
@@ -55,7 +72,7 @@
     </p>
     <hr class="my-4">
     <p class="main-text">
-      MyFreeGirlClub is a playful paradise for those who love to gaze upon gorgeous gals from around the globe!
+      MyFreeGirlsClub is a playful paradise for those who love to gaze upon gorgeous gals from around the globe!
       This tantalizing website features a diverse selection of beauties with a wide range of looks, styles,
       and personalities, all captured in stunning images. Whether you're into fashion, beauty, or simply
       adore the female form, this website is sure to have something that will captivate and inspire you. So why wait?
