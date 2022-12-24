@@ -13,3 +13,10 @@
 .open-post-h1 {
     text-align: center;
 }
+
+.open-post-textarea {
+    width: 100%;
+    height: 80px;
+    background-color: aliceblue;
+    resize: none;
+}

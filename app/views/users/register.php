@@ -25,7 +25,7 @@
             <input type="password" name="confirm_password" class="form-control form-control-lg <?php echo (!empty($data['confirm_password_err'])) ? 'is-invalid' : ''; ?>" value="<?php echo $data['confirm_password']; ?>">
             <span class="invalid-feedback"><?php echo $data['confirm_password_err']; ?></span>
           </div>
-
+          <p>We value your privacy and take steps to protect it. As a result, we do not ask for your email address.</p>
           <div class="row">
             <div class="col">
               <input type="submit" value="Register" class="btn btn-success btn-block">
