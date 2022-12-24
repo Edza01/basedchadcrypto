@@ -15,22 +15,32 @@
     <?php $full_size_img = $data['pages']->image_name; ?>
     <img src='<?php echo URLROOT; ?>/public/img/<?php echo $full_size_img ?>' alt='<?php echo $full_size_img ?>' class='open-post-image'> 
 
-    <hr/>
+    <hr />
 
-    
+    <form action="<?php echo URLROOT; ?>/posts/add" method="post">
 
-    <?php foreach ($data['comments'] as $post) : ?>
+      <div class="form-group">
+        <label for="city_name">City: <sup>*</sup></label>
+        <input type="text" name="city_name" class="form-control form-control-lg <?php echo (!empty($data['city_name_err'])) ? 'is-invalid' : ''; ?>" value="<?php echo $data['city_name']; ?>">
+        <span class="invalid-feedback"><?php echo $data['city_name_err']; ?></span>
+      </div>
+     
+      <input type="submit" class="btn btn-success" value="Submit">
+    </form>
 
-        <?php print_r($post); ?>
 
 
+    <div class="card-container justify-content-center">
+        <?php foreach ($data['comments'] as $post) : ?>
+            <div class="card card-body mb-3 posts-container">
 
-    <?php endforeach; ?>
+                <h4 class="card-title"><?php echo $post->city_name; ?> <?php echo $country; ?></h4>
 
-    <!-- <?php print_r($post->date); ?>
-    <?php print_r($post->message); ?>
-    <?php print_r($post->date); ?> -->
-    
+            </div>
+
+        <?php endforeach; ?>
+    </div>
+
 </div>
 
 
@@ -43,7 +53,3 @@
 
 
 <?php require APPROOT . '/views/inc/footer.php'; ?>
-
-
-
-  

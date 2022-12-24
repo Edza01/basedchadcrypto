@@ -30,39 +30,27 @@ class Posts extends Controller
 
         $data = [
           'city_name' => ucfirst(trim($_POST['city_name'])),
-          'user_id' => $_SESSION['user_id'],
-          'city_name_err' => ''
+          'user_id' => $_SESSION['user_id']
         ];
 
-        // Validate data
-        if (empty($data['city_name'])) {
-          $data['city_name_err'] = 'Please enter city';
-        }
-
-        
         // Make sure no errors
-        if (empty($data['city_name_err'])) {
+        if (!empty($_POST['city_name'])) {
           // Validated
           if ($this->postModel->addComment($data)) {
             flash('post_message', 'Post Added');
-            redirect('posts');
+
+            redirect($_SESSION['currenturl']);
           } else {
             die('Something went wrong');
           }
-        } else {
-          // Load view with errors
-          $this->view('posts/add', $data);
+        } 
+        else
+        {
+          redirect($_SESSION['currenturl']);
         }
       
     } 
-    else 
-    {
-      $data = [
-        'city_name' => ''
-      ];
-
-      $this->view('posts/add', $data);
-    }
+    
   }
 
   
