@@ -10,8 +10,12 @@
     <br>
     <h1 class='open-post-h1'><?php echo $data['pages']->image_name; ?></h1>
 
-    <?php print_r($data['pages']->id); ?>
 
+
+    <!-- <?php print_r($data['pages']->id); ?> -->
+
+
+    
     <?php $full_size_img = $data['pages']->image_name; ?>
     <img src='<?php echo URLROOT; ?>/public/img/<?php echo $full_size_img ?>' alt='<?php echo $full_size_img ?>' class='open-post-image'> 
 
@@ -21,11 +25,11 @@
 
       <div class="form-group">
         <label for="city_name">City: <sup>*</sup></label>
-        <input type="text" name="city_name" class="form-control form-control-lg <?php echo (!empty($data['city_name_err'])) ? 'is-invalid' : ''; ?>" value="<?php echo $data['city_name']; ?>">
+        <textarea type="text" name="city_name" class="open-post-textarea form-control form-control-lg <?php echo (!empty($data['city_name_err'])) ? 'is-invalid' : ''; ?>" value="<?php echo $data['city_name']; ?>"></textarea>
         <span class="invalid-feedback"><?php echo $data['city_name_err']; ?></span>
       </div>
      
-      <input type="submit" class="btn btn-success" value="Submit">
+      <input type="submit" class="open-post-button" value="Submit">
     </form>
 
 
