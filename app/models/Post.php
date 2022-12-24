@@ -60,7 +60,7 @@ class Post
     return $results;
   }
   
-  public function addPost($data)
+  public function addComment($data)
   {
     $this->db->query('INSERT INTO posts2 (city_name, user_id) VALUES(:city_name, :user_id)');
     // Bind values

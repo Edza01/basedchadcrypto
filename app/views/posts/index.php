@@ -17,34 +17,18 @@
 
 </div>
 
-<form action="" method="post">
-  <div class="order-container">
-    <div class="row">
-      <h3>Order Cities By: </h3>
 
-      <select name="ordercities" onchange="this.form.submit();" class="custom-select">
-        <option>select</option>
-        <option value="descending">descending</option>
-        <option value="ascending">ascending</option>
-      </select>
-
-    </div>
-  </div>
-</form>
 
 
 <div class="card-container justify-content-center">
   <?php foreach ($data['posts'] as $post) : ?>
     <div class="card card-body mb-3 posts-container">
 
-      <h4 class="card-title"><?php echo $post->city_name; ?>, <?php echo $country; ?></h4>
+      <h4 class="card-title"><?php echo $post->city_name; ?> <?php echo $country; ?></h4>
 
     </div>
-
-    <a href="<?php echo URLROOT; ?>/posts/show/<?php echo $post->id; ?>" class="btn btn-dark">More</a>
-
-</div>
-<?php endforeach; ?>
+  
+  <?php endforeach; ?>
 </div>
 
 

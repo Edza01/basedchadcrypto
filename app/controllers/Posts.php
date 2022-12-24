@@ -43,7 +43,7 @@ class Posts extends Controller
         // Make sure no errors
         if (empty($data['city_name_err'])) {
           // Validated
-          if ($this->postModel->addPost($data)) {
+          if ($this->postModel->addComment($data)) {
             flash('post_message', 'Post Added');
             redirect('posts');
           } else {
@@ -65,13 +65,5 @@ class Posts extends Controller
     }
   }
 
-  public function show($id){
-    $post = $this->postModel->getPostById($id);
-    
-    $data = [
-      'post' => $post
-    ];
-
-    $this->view('posts/show', $data);
-  }
+  
 }
