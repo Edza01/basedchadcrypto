@@ -2,6 +2,12 @@
 
 <div class="index-container">
 
+
+
+
+
+
+
   <div class="masonry">
     <?php foreach ($data['posts'] as $post) : ?>
 

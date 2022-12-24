@@ -17,6 +17,15 @@ class Post
     return $results;
   }
 
+  public function getComments()
+  {
+    $this->db->query('SELECT * FROM comments ORDER BY date DESC');
+
+    $results = $this->db->resultSet();
+
+    return $results;
+  }
+
   public function getPostById($id)
   {
     $this->db->query('SELECT * FROM posts WHERE id = :id');
@@ -37,11 +46,25 @@ class Post
   }
 
 
+  
+ 
+
 
   
 
 
- 
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
