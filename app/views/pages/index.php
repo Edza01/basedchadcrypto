@@ -6,7 +6,7 @@
     <?php foreach ($data['posts'] as $post) : ?>
 
       <a href="<?php echo URLROOT; ?>/pages/show/<?php echo $post->id; ?>" class="masonry-item">
-        <img src='public/img/<?php echo $post->city_name; ?>' alt='<?php echo $post->city_name; ?>'>
+        <img src='public/img/<?php echo $post->image_name; ?>' alt='<?php echo $post->image_name; ?>'>
       </a>
 
     <?php endforeach; ?>
@@ -27,10 +27,10 @@
     <div class="pagination-centred">
         <?php
           if ($page >= 1) {
-            echo "<a class='pagination-direction' href='?page=" . ($page - 1) . "'>  Previous </a>";
+            echo "<a class='pagination-direction' href='?page=" . ($page - 1) . "'>  <i class='fa-solid fa-backward fa-3x'></i> </a>";
           }
           if ($page < $total_pages-1) {
-            echo "<a class='pagination-direction' href='?page=" . ($page + 1) . "'>  Next </a>";
+            echo "<a class='pagination-direction' href='?page=" . ($page + 1) . "'>  <i class='fa-solid fa-forward fa-3x'></i> </a>";
           }
         ?>
     </div>
@@ -38,7 +38,7 @@
     <div class="inline">
         <input id="slect-page" type="number" min="0" max="<?php echo $total_pages -1?>" placeholder="<?php echo $page . "/" . $total_pages-1; ?>" required>
        
-        <button class="button-55" role="button" onClick="go2Page();">Go</button>
+        <button class="button-change-page" role="button" onClick="go2Page();">Go</button>
   </div>
   </div>
 

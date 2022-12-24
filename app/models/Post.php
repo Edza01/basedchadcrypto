@@ -47,9 +47,9 @@ class Post
 
   // public function addPost($data)
   // {
-  //   $this->db->query('INSERT INTO posts (city_name, user_id) VALUES(:city_name, :user_id)');
+  //   $this->db->query('INSERT INTO posts (image_name, user_id) VALUES(:image_name, :user_id)');
   //   // Bind values
-  //   $this->db->bind(':city_name', $data['city_name']);
+  //   $this->db->bind(':image_name', $data['image_name']);
   //   $this->db->bind(':user_id', $data['user_id']);
 
   //   // Execute
@@ -85,7 +85,7 @@ class Post
   // {
   //   $upercaseCity = ucfirst($city);
 
-  //   $this->db->query("SELECT * FROM posts WHERE city_name = '{$upercaseCity}'");
+  //   $this->db->query("SELECT * FROM posts WHERE image_name = '{$upercaseCity}'");
 
   //   $results = $this->db->resultSet();
     

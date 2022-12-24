@@ -29,25 +29,25 @@ class Posts extends Controller
   //     $_POST = filter_input_array(INPUT_POST, FILTER_SANITIZE_FULL_SPECIAL_CHARS);
 
   //     // Check if api return no error
-  //     if ($this->postModel->addWeatherCast(trim($_POST['city_name'])) != false) {
+  //     if ($this->postModel->addWeatherCast(trim($_POST['image_name'])) != false) {
 
   //       $data = [
-  //         'city_name' => ucfirst(trim($_POST['city_name'])),
+  //         'image_name' => ucfirst(trim($_POST['image_name'])),
   //         'user_id' => $_SESSION['user_id'],
-  //         'city_name_err' => ''
+  //         'image_name_err' => ''
   //       ];
 
   //       // Validate data
-  //       if (empty($data['city_name'])) {
-  //         $data['city_name_err'] = 'Please enter city';
+  //       if (empty($data['image_name'])) {
+  //         $data['image_name_err'] = 'Please enter city';
   //       }
 
-  //       if ($this->postModel->checkIfCountryExists($data['city_name'])) {
-  //         $data['city_name_err'] = 'City already exists';
+  //       if ($this->postModel->checkIfCountryExists($data['image_name'])) {
+  //         $data['image_name_err'] = 'City already exists';
   //       }
 
   //       // Make sure no errors
-  //       if (empty($data['city_name_err'])) {
+  //       if (empty($data['image_name_err'])) {
   //         // Validated
   //         if ($this->postModel->addPost($data)) {
   //           flash('post_message', 'Post Added');
@@ -61,8 +61,8 @@ class Posts extends Controller
   //       }
   //     } else {
   //       $data = [
-  //         'city_name' => '',
-  //         'city_name_err' => 'Please enter valid city'
+  //         'image_name' => '',
+  //         'image_name_err' => 'Please enter valid city'
   //       ];
 
   //       $this->view('posts/add', $data);
@@ -71,7 +71,7 @@ class Posts extends Controller
   //   else 
   //   {
   //     $data = [
-  //       'city_name' => ''
+  //       'image_name' => ''
   //     ];
 
   //     $this->view('posts/add', $data);
