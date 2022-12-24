@@ -34,6 +34,26 @@
 </div>
 
 
+
+<div class="card-container justify-content-center">
+  <?php foreach ($data['posts'] as $post) : ?>
+    <div class="card card-body mb-3 posts-container">
+
+      <h4 class="card-title"><?php echo $post->city_name; ?>, <?php echo $country; ?></h4>
+
+    </div>
+
+    <a href="<?php echo URLROOT; ?>/posts/show/<?php echo $post->id; ?>" class="btn btn-dark">More</a>
+
+</div>
+<?php endforeach; ?>
+</div>
+
+
+
+
+
+
 <?php require APPROOT . '/views/inc/footer.php'; ?>
 
 
