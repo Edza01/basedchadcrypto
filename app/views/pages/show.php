@@ -30,7 +30,7 @@
                 <input type='hidden' name='date' value='".date('Y-m-d H:i:s')."'>
                 <textarea class='open-post-textarea' name='message'></textarea>
                 <br>
-                <button type='submit' name='submit'>Comment</button>
+                <button class='open-post-button' type='submit' name='submit'>Comment</button>
             </form>";
 
     ?>
