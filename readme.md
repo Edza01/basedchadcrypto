@@ -14,51 +14,29 @@ Edit there :
 
 
 
-  <?php
-    $total_posts_obj = $this->postModel->getPostCount();
-    $total_posts = $total_posts_obj[0]->{'count'};
-    $total_pages = ceil($total_posts / 24);
+  <div id="jar" style="display:none" class="masonry">
+    <?php foreach ($data['posts'] as $post) : ?>
 
-    $posts_per_page = 7;
-    
-    $current_page = $_GET['page'];
-    $prev_page = $current_page - 1;
-    $next_page = $current_page + 1;
+      <!-- <a href="<?php echo URLROOT; ?>/pages/show/<?php echo $post->id; ?>" class="masonry-item content">
+        <img src='public/img/<?php echo $post->city_name; ?>' alt='<?php echo $post->city_name; ?>'>
+      </a> -->
 
-    if ($prev_page == 0 || $prev_page < 0)
-    {
-      $prev_page = 0;
-    }
+      <a class="masonry-item content">
+        <img onclick="onClick(this)" class="modal-hover-opacity" src='public/img/<?php echo $post->city_name; ?>' alt='<?php echo $post->city_name; ?>'>
+      </a>
 
-    if ($next_page == $total_pages || $next_page > $total_pages)
-    {
-      $next_page = $total_pages;
-    }
-      
-  echo $_GET['page'];
-    
-  ?>
 
-  <div class="pagination-container">
+      <div id="modal01" class="modal" onclick="this.style.display='none'">
+        <span class="close">&times;&nbsp;&nbsp;&nbsp;&nbsp;</span>
+        <div class="modal-content">
+          <img id="img01" style="max-width:100%">
+          <p>text</p>
+        </div>
+      </div>
 
-    <!-- <a class="first-page" href="#"> <i class="fa-solid fa-backward fa-xl"></i> </a> -->
-    
-    <ul class="pagination">
-   
-      <li><a href="?page=<?php echo $prev_page ?>" class="prev">Prev</a></li>
-      <?php
-        for ($i = 0; $i < $total_pages; $i++) {
-          echo "<li><a class='page-index' href='?page=" . $i . "'>" . $i . "</a></li>";
-          // if ($i == $posts_per_page)
-          // {
-          //   break;
-          // }
-        }
-      ?>
-      <li><a href="?page=<?php echo $prev_page ?>" class="next">Next</a></li>
-    
-    </ul>
+    <?php endforeach; ?>
+  </div>
 
-    <!-- <a class="last-page" href="#"> <i class="fa-solid fa-forward fa-xl	"></i> </a> -->
 
+  <div class="pagination">
   </div>

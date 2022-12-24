@@ -8,6 +8,21 @@ class Pages extends Controller
 
   public function index()
   {
+    if (isset($_GET['page']))
+    {
+      $page = $_GET['page'];
+
+      $posts = $this->postModel->getPosts($page * 30);
+
+        $data = [
+          'posts' => $posts
+        ];
+
+
+        $this->view('pages/index', $data);
+    }
+    else
+    {
         // Get posts if no POST method was used
         $posts = $this->postModel->getPosts();
 
@@ -16,7 +31,8 @@ class Pages extends Controller
         ];
 
 
-        $this->view('pages/index', $data);   
+        $this->view('pages/index', $data);
+    }    
   }
 
   public function show($id)

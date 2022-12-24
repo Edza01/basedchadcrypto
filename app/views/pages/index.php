@@ -2,32 +2,58 @@
 
 <div class="index-container">
 
-  <div id="jar" style="display:none" class="masonry">
+  <div class="masonry">
     <?php foreach ($data['posts'] as $post) : ?>
 
-      <!-- <a href="<?php echo URLROOT; ?>/pages/show/<?php echo $post->id; ?>" class="masonry-item content">
+      <a href="<?php echo URLROOT; ?>/pages/show/<?php echo $post->id; ?>" class="masonry-item">
         <img src='public/img/<?php echo $post->city_name; ?>' alt='<?php echo $post->city_name; ?>'>
-      </a> -->
-
-      <a class="masonry-item content">
-        <img onclick="onClick(this)" class="modal-hover-opacity" src='public/img/<?php echo $post->city_name; ?>' alt='<?php echo $post->city_name; ?>'>
       </a>
-
-
-      <div id="modal01" class="modal" onclick="this.style.display='none'">
-        <span class="close">&times;&nbsp;&nbsp;&nbsp;&nbsp;</span>
-        <div class="modal-content">
-          <img id="img01" style="max-width:100%">
-          <p>text</p>
-        </div>
-      </div>
 
     <?php endforeach; ?>
   </div>
 
+  <?php 
+    $total_posts_obj = $this->postModel->getPostCount();
+    $total_posts = $total_posts_obj[0]->{'count'};
+    $total_pages = ceil($total_posts / 30);
+    $page = $_GET['page'];
+    $pagLink = "";
+  ?>
 
-  <div class="pagination">
+
+
+
+  <div class="paginaton-container">
+    <div class="pagination-centred">
+        <?php
+          if ($page >= 1) {
+            echo "<a class='pagination-direction' href='?page=" . ($page - 1) . "'>  Previous </a>";
+          }
+          if ($page < $total_pages-1) {
+            echo "<a class='pagination-direction' href='?page=" . ($page + 1) . "'>  Next </a>";
+          }
+        ?>
+    </div>
+    
+    <div class="inline">
+        <input id="slect-page" type="number" min="0" max="<?php echo $total_pages -1?>" placeholder="<?php echo $page . "/" . $total_pages-1; ?>" required>
+       
+        <button class="button-55" role="button" onClick="go2Page();">Go</button>
   </div>
+  </div>
+
+  
+  <script>
+    function go2Page() {
+      var page = document.getElementById("slect-page").value;
+      page = ((page > <?php echo $total_pages-1; ?>) ? <?php echo $total_pages-1; ?> : ((page <= 0) ? 0 : page));
+      window.location.href = '?page=' + page;
+    }
+  </script>
+
+
+
+
 
   <div class="jumbotron">
     <h1 class="display-4">MyFreeGirlsClub</h1>
