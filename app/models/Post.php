@@ -10,7 +10,7 @@ class Post
 
   public function getPosts($offset = 0)
   {
-    $this->db->query('SELECT * FROM posts ORDER BY created_at DESC LIMIT 24 OFFSET '. $offset);
+    $this->db->query('SELECT * FROM posts ORDER BY created_at DESC');
 
     $results = $this->db->resultSet();
 
@@ -27,14 +27,14 @@ class Post
     return $row;
   }
 
-  public function getPostCount()
-  {
-    $this->db->query('SELECT COUNT(*) as count FROM posts ORDER BY created_at DESC');
+  // public function getPostCount()
+  // {
+  //   $this->db->query('SELECT COUNT(*) as count FROM posts ORDER BY created_at DESC');
 
-    $results = $this->db->resultSet();
+  //   $results = $this->db->resultSet();
 
-    return $results;
-  }
+  //   return $results;
+  // }
 
 
 

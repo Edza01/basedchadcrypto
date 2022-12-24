@@ -2,60 +2,18 @@
 
 <div class="index-container">
 
-  <div class="masonry">
+  <div id="jar" style="display:none" class="masonry">
     <?php foreach ($data['posts'] as $post) : ?>
 
-      <a href="<?php echo URLROOT; ?>/pages/show/<?php echo $post->id; ?>" class="masonry-item">
+      <a href="<?php echo URLROOT; ?>/pages/show/<?php echo $post->id; ?>" class="masonry-item content">
         <img src='public/img/<?php echo $post->city_name; ?>' alt='<?php echo $post->city_name; ?>'>
       </a>
 
     <?php endforeach; ?>
   </div>
 
-
-
-
-
-
-
-
-  
-<?php 
-    $total_posts_obj = $this->postModel->getPostCount();
-    $total_posts = $total_posts_obj[0]->{'count'};
-    $total_pages = ceil($total_posts / 24);
-
-
-    $page = $_GET['page'];
-    ?>
-    
-    <ul class="pagination">
-      <?php 
-        if($page>1)
-        {
-            echo "<li><a class='prev' href='?page=".($page-1)."' class='btn btn-danger'>Previous</a></li>";
-        }
-
-        for($i=1;$i<$total_pages;$i++)
-        {
-            echo "<li><a class='page-index' href='?page=".$i."' class='btn btn-primary'>$i</a></li>";
-        }
-
-        if($i>$page)
-        {
-            echo "<li><a class='next' href='?page=".($page+1)."' class='btn btn-danger'>Next</a></li>";
-        }
-      ?>
-    </ul>
-
-
-    
-
-
-
-
-
-
+  <div class="pagination">
+  </div>
 
   <div class="jumbotron">
     <h1 class="display-4">MyFreeGirlsClub</h1>
