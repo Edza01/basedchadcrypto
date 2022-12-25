@@ -8,7 +8,7 @@ class Pages extends Controller
 
   public function index()
   {
-    if (isset($_GET['page']))
+    if (isset($_GET['page']) && is_numeric($_GET['page']))
     {
       $page = $_GET['page'];
 

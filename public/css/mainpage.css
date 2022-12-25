@@ -23,21 +23,7 @@ body {
     padding: 3rem;
 }
 
-.pagination-direction {
-    color: rgb(195, 50, 50);
-    padding: 1rem;
-}
 
-.pagination-direction:hover {
-    color: rgb(209, 49, 49);
-    transform: translateY(-2px);
-    text-decoration: none;
-}
-
-#slect-page {
-    padding: .65rem;
-    width: 5rem;
-}
 
 textarea:focus, input:focus{
     outline: none;
@@ -108,8 +94,12 @@ textarea:focus, input:focus{
     z-index: 3;
     color: #fff;
     cursor: default;
-    background-color: #337ab7;
-    border-color: #337ab7;
+    background-color: #b73342;
+    border-color: #b73342;
+}
+
+.disabled {
+    cursor: not-allowed;
 }
 
 .pagination>li>a, .pagination>li>span {
@@ -118,7 +108,7 @@ textarea:focus, input:focus{
     padding: 6px 12px;
     margin-left: -1px;
     line-height: 1.42857143;
-    color: #337ab7;
+    color: #b73342;
     text-decoration: none;
     background-color: #fff;
     border: 1px solid #ddd;
