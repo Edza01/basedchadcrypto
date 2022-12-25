@@ -14,29 +14,7 @@ Edit there :
 
 
 
-  <div id="jar" style="display:none" class="masonry">
-    <?php foreach ($data['posts'] as $post) : ?>
-
-      <!-- <a href="<?php echo URLROOT; ?>/pages/show/<?php echo $post->id; ?>" class="masonry-item content">
-        <img src='public/img/<?php echo $post->city_name; ?>' alt='<?php echo $post->city_name; ?>'>
-      </a> -->
-
-      <a class="masonry-item content">
-        <img onclick="onClick(this)" class="modal-hover-opacity" src='public/img/<?php echo $post->city_name; ?>' alt='<?php echo $post->city_name; ?>'>
-      </a>
+  I make $40 / mo. from AdSense, $100 / mo. from Affiliates, and $300 / mo. from advertisers. That's $440 / mo. that I don't really have to work to achieve. ($5280 / yr
 
 
-      <div id="modal01" class="modal" onclick="this.style.display='none'">
-        <span class="close">&times;&nbsp;&nbsp;&nbsp;&nbsp;</span>
-        <div class="modal-content">
-          <img id="img01" style="max-width:100%">
-          <p>text</p>
-        </div>
-      </div>
-
-    <?php endforeach; ?>
-  </div>
-
-
-  <div class="pagination">
-  </div>
+  So, I first study the competitor (successful campaigns), create content or ad like them, share them on Facebook, and then promote them. The $50 which I spend on them give me better results than $500 without this strategy. My targeted audience on the Facebook automatically starts to share, like and visit my website.

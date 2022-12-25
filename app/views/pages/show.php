@@ -14,14 +14,7 @@
 
 
 
-  <?php echo $data['pages']->id; ?>
-  <?php
-
-  if (isset($_SESSION['username'])) {
-    print_r($_SESSION['username']);
-  }
-
-  ?>
+ 
 
 
 
@@ -48,7 +41,10 @@
         <span class="invalid-feedback"><?php echo $data['post_comment_err']; ?></span>
       </div>
 
-      <input type="submit" class="open-post-button" value="Submit">
+      <div class="open-post-button-container">
+        <input type="submit" class="open-post-button" value="Submit">
+      </div>
+      
     </form>
 
   <?php else : ?>
@@ -69,18 +65,47 @@
   <?php endif; ?>
 
 
+ 
 
 
   <div class="card-container justify-content-center">
-    <?php foreach ($data['commenttest'] as $post) : ?>
+
+    <?php foreach ($data['comments'] as $post) : ?>
       <div class="card card-body mb-3 posts-container">
 
-        <h4 class="card-title"><?php echo $post->post_comment; ?> <?php echo $country; ?></h4>
+        <?php
+          $dt = new DateTime($post->date);
+          $year_month_day = $dt->format('Y-m-d');
+        ?>
+
+        <div class="inline-comment-data">
+          <h4 class="card-title"><?php echo $post->username; ?> </h4>
+          <p class='card-date'><?php echo $year_month_day; ?></p>
+        </div>
+
+        <p><?php echo $post->post_comment; ?></p>
 
       </div>
 
     <?php endforeach; ?>
   </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
 
 </div>
 

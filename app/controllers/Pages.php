@@ -37,15 +37,12 @@ class Pages extends Controller
 
   public function show($id)
   {
-    // $comment = $this->postModel->getPostsComments();
     $post = $this->postModel->getPostById($id);
-
-    $commenttest = $this->postModel->getCommentsFromPostWhere_page_id($id);
+    $comments = $this->postModel->getCommentsFromPostWhere_page_id($id);
 
     $data = [
       'pages' => $post,
-      // 'comments' => $comment,
-      'commenttest' => $commenttest
+      'comments' => $comments
     ];
 
     $this->view('pages/show', $data);
@@ -80,7 +77,7 @@ class Pages extends Controller
         ];
 
         // Make sure no errors
-        if (!empty($_POST['post_comment'])) {
+        if (!empty($_POST['post_comment']) && isset($_SESSION['user_id'])) {
           // Validated
           if ($this->postModel->addComment($data)) {
             flash('post_message', 'Post Added');

@@ -2,6 +2,7 @@
     display: block;
     margin-left: auto;
     margin-right: auto;
+    width: 90%;
 }
 
 .show-container {
@@ -19,6 +20,21 @@
     height: 80px;
     background-color: aliceblue;
     resize: none;
+}
+
+.open-post-button-container {
+    width: 100%;
+    display: flex;   
+  justify-content: flex-end;
+}
+
+
+.show-container {
+    padding-bottom: 2rem;
+}
+
+.card-container {
+    padding-top: 2rem;
 }
 
 
@@ -80,3 +96,14 @@ a:focus {
     text-decoration: none;
 
 }
+
+.inline-comment-data h4,
+.inline-comment-data p {
+  display: inline-block;
+}
+
+
+sup {
+    color: #b73342;
+}
+
