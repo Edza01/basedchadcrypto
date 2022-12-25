@@ -3,11 +3,6 @@
 <div class="index-container">
 
 
-
-
-
-
-
   <div class="masonry">
     <?php foreach ($data['posts'] as $post) : ?>
 
@@ -18,44 +13,81 @@
     <?php endforeach; ?>
   </div>
 
-  <?php 
-    $total_posts_obj = $this->postModel->getPostCount();
-    $total_posts = $total_posts_obj[0]->{'count'};
-    $total_pages = ceil($total_posts / 30);
-    $page = $_GET['page'];
-    $pagLink = "";
+
+
+
+  
+
+
+  <?php
+
+  if (isset($_GET['page']) && $_GET['page'] != "") {
+    $page_no = $_GET['page'];
+  } else {
+    $page_no = 0;
+  }
+
+  $total_records_per_page = 30;
+
+  $offset = ($page_no - 1) * $total_records_per_page;
+  $previous_page = $page_no - 1;
+  $next_page = $page_no + 1;
+  $adjacents = "2";
+
+
+  $total_posts_obj = $this->postModel->getPostCount();
+  $total_posts = $total_posts_obj[0]->{'count'};
+  $total_no_of_pages = ceil($total_posts / 30) - 1;
+  $second_last = $total_no_of_pages - 1; // total pages minus 1
+
   ?>
-
-
-
 
   <div class="paginaton-container">
     <div class="pagination-centred">
+
+      <div>
+        <strong>Page <?php echo $page_no . " of " . $total_no_of_pages; ?></strong>
+      </div>
+
+      <ul class="pagination">
+        <?php if ($page_no > 0) {
+          echo "<li><a href='?page=0'>First Page</a></li>";
+        } ?>
+
+        <li <?php if ($page_no <= 0) {
+              echo "class='disabled'";
+            } ?>>
+          <a <?php if ($page_no > 0) {
+                echo "href='?page=$previous_page'";
+              } ?>>Previous</a>
+        </li>
         <?php
-          if ($page >= 1) {
-            echo "<a class='pagination-direction' href='?page=" . ($page - 1) . "'>  <i class='fa-solid fa-backward fa-3x'></i> </a>";
+        if ($total_no_of_pages <= 10) {
+          for ($counter = 0; $counter <= $total_no_of_pages; $counter++) {
+            if ($counter == $page_no) {
+              echo "<li class='active'><a>$counter</a></li>";
+            } else {
+              echo "<li><a href='?page=$counter'>$counter</a></li>";
+            }
           }
-          if ($page < $total_pages-1) {
-            echo "<a class='pagination-direction' href='?page=" . ($page + 1) . "'>  <i class='fa-solid fa-forward fa-3x'></i> </a>";
-          }
+        }
         ?>
+        <li <?php if ($page_no >= $total_no_of_pages) {
+              echo "class='disabled'";
+            } ?>>
+          <a <?php if ($page_no < $total_no_of_pages) {
+                echo "href='?page=$next_page'";
+              } ?>>Next</a>
+        </li>
+
+        <?php if ($page_no < $total_no_of_pages) {
+          echo "<li><a href='?page=$total_no_of_pages'>Last &rsaquo;&rsaquo;</a></li>";
+        } ?>
+      </ul>
+
     </div>
-    
-    <div class="inline">
-        <input id="slect-page" type="number" min="0" max="<?php echo $total_pages -1?>" placeholder="<?php echo $page . "/" . $total_pages-1; ?>" required>
-       
-        <button class="button-change-page" role="button" onClick="go2Page();">Go</button>
-  </div>
   </div>
 
-  
-  <script>
-    function go2Page() {
-      var page = document.getElementById("slect-page").value;
-      page = ((page > <?php echo $total_pages-1; ?>) ? <?php echo $total_pages-1; ?> : ((page <= 0) ? 0 : page));
-      window.location.href = '?page=' + page;
-    }
-  </script>
 
 
 
