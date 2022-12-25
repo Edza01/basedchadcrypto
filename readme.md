@@ -29,3 +29,4 @@ ads: Ezoic Ads	Mediavine Ads
 
 
 https://blog.hubspot.com/sales/amazon-affiliate
+
