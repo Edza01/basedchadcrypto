@@ -21,7 +21,7 @@
 
     <hr />
 
-    <form action="<?php echo URLROOT; ?>/posts/add" method="post">
+    <form action="<?php echo URLROOT; ?>/pages/add" method="post">
 
       <div class="form-group">
         <label for="city_name">City: <sup>*</sup></label>
