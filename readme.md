@@ -18,3 +18,14 @@ Edit there :
 
 
   So, I first study the competitor (successful campaigns), create content or ad like them, share them on Facebook, and then promote them. The $50 which I spend on them give me better results than $500 without this strategy. My targeted audience on the Facebook automatically starts to share, like and visit my website.
+
+
+  Let's think about the worst case scenario. You invest $1,000 on the content, and after a year, your website earns only $50. You still sell it on Flippa for $1,200. You can get your entire investment back with $200 profit.
+
+The niche website covers you in an emergency. Please remember $3,000/month is average after 6-8 months, but let's say your website only makes $1,000/month. You can sell it for $24,000 at least to banish your money worries. The rule is to multiply your monthly income with 24. This should be the least amount you expect.
+
+
+ads: Ezoic Ads	Mediavine Ads
+
+
+https://blog.hubspot.com/sales/amazon-affiliate
