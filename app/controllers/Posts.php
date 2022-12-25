@@ -29,12 +29,12 @@ class Posts extends Controller
       
 
   //       $data = [
-  //         'city_name' => ucfirst(trim($_POST['city_name'])),
+  //         'post_comment' => ucfirst(trim($_POST['post_comment'])),
   //         'user_id' => $_SESSION['user_id']
   //       ];
 
   //       // Make sure no errors
-  //       if (!empty($_POST['city_name'])) {
+  //       if (!empty($_POST['post_comment'])) {
   //         // Validated
   //         if ($this->postModel->addComment($data)) {
   //           flash('post_message', 'Post Added');

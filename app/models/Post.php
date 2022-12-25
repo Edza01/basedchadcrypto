@@ -46,7 +46,7 @@ class Post
 
    public function getPostsComments()
   {
-    $this->db->query('SELECT * FROM posts2 ORDER BY city_name DESC');
+    $this->db->query('SELECT * FROM comments ORDER BY post_comment DESC');
 
     $results = $this->db->resultSet();
 
@@ -55,9 +55,9 @@ class Post
   
   public function addComment($data)
   {
-    $this->db->query('INSERT INTO posts2 (city_name, user_id) VALUES(:city_name, :user_id)');
+    $this->db->query('INSERT INTO comments (post_comment, user_id) VALUES(:post_comment, :user_id)');
     // Bind values
-    $this->db->bind(':city_name', $data['city_name']);
+    $this->db->bind(':post_comment', $data['post_comment']);
     $this->db->bind(':user_id', $data['user_id']);
 
     // Execute
