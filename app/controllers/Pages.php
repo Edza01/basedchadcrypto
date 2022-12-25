@@ -58,6 +58,7 @@ class Pages extends Controller
     $this->view('pages/about', $data);
   }
 
+
   public function add()
   {
     if ($_SERVER['REQUEST_METHOD'] == 'POST') 
@@ -70,7 +71,9 @@ class Pages extends Controller
 
         $data = [
           'post_comment' => ucfirst(trim($_POST['post_comment'])),
-          'user_id' => $_SESSION['user_id']
+          'user_id' => $_SESSION['user_id'],
+          'username' => $_SESSION['username'],
+          'page_id' => $_POST['page_id']
         ];
 
         // Make sure no errors

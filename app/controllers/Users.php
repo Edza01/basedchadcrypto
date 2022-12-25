@@ -15,22 +15,22 @@
         // Init data
         $data =[
           'name' => trim($_POST['name']),
-          'nickname' => trim($_POST['nickname']),
+          'username' => trim($_POST['username']),
           'password' => trim($_POST['password']),
           'confirm_password' => trim($_POST['confirm_password']),
           'name_err' => '',
-          'nickname_err' => '',
+          'username_err' => '',
           'password_err' => '',
           'confirm_password_err' => ''
         ];
 
-        // Validate nickname
-        if(empty($data['nickname'])){
-          $data['nickname_err'] = 'Pleae enter nickname';
+        // Validate username
+        if(empty($data['username'])){
+          $data['username_err'] = 'Pleae enter username';
         } else {
-          // Check nickname
-          if($this->userModel->findUserBynickname($data['nickname'])){
-            $data['nickname_err'] = 'nickname is already taken';
+          // Check username
+          if($this->userModel->findUserByusername($data['username'])){
+            $data['username_err'] = 'username is already taken';
           }
         }
 
@@ -56,7 +56,7 @@
         }
 
         // Make sure errors are empty
-        if(empty($data['nickname_err']) && empty($data['name_err']) && empty($data['password_err']) && empty($data['confirm_password_err'])){
+        if(empty($data['username_err']) && empty($data['name_err']) && empty($data['password_err']) && empty($data['confirm_password_err'])){
           // Validated
           
           // Hash Password
@@ -79,11 +79,11 @@
         // Init data
         $data =[
           'name' => '',
-          'nickname' => '',
+          'username' => '',
           'password' => '',
           'confirm_password' => '',
           'name_err' => '',
-          'nickname_err' => '',
+          'username_err' => '',
           'password_err' => '',
           'confirm_password_err' => ''
         ];
@@ -102,15 +102,15 @@
         
         // Init data
         $data =[
-          'nickname' => trim($_POST['nickname']),
+          'username' => trim($_POST['username']),
           'password' => trim($_POST['password']),
-          'nickname_err' => '',
+          'username_err' => '',
           'password_err' => '',      
         ];
 
-        // Validate nickname
-        if(empty($data['nickname'])){
-          $data['nickname_err'] = 'Pleae enter nickname';
+        // Validate username
+        if(empty($data['username'])){
+          $data['username_err'] = 'Pleae enter username';
         }
 
         // Validate Password
@@ -118,19 +118,19 @@
           $data['password_err'] = 'Please enter password';
         }
 
-        // Check for user/nickname
-        if($this->userModel->findUserBynickname($data['nickname'])){
+        // Check for user/username
+        if($this->userModel->findUserByusername($data['username'])){
           // User found
         } else {
           // User not found
-          $data['nickname_err'] = 'No user found';
+          $data['username_err'] = 'No user found';
         }
 
         // Make sure errors are empty
-        if(empty($data['nickname_err']) && empty($data['password_err'])){
+        if(empty($data['username_err']) && empty($data['password_err'])){
           // Validated
           // Check and set logged in user
-          $loggedInUser = $this->userModel->login($data['nickname'], $data['password']);
+          $loggedInUser = $this->userModel->login($data['username'], $data['password']);
 
           if($loggedInUser){
             // Create Session
@@ -149,9 +149,9 @@
       } else {
         // Init data
         $data =[    
-          'nickname' => '',
+          'username' => '',
           'password' => '',
-          'nickname_err' => '',
+          'username_err' => '',
           'password_err' => '',        
         ];
 
@@ -162,14 +162,14 @@
 
     public function createUserSession($user){
       $_SESSION['user_id'] = $user->id;
-      $_SESSION['user_nickname'] = $user->nickname;
+      $_SESSION['username'] = $user->username;
       $_SESSION['user_name'] = $user->name;
       redirect('pages');
     }
 
     public function logout(){
       unset($_SESSION['user_id']);
-      unset($_SESSION['user_nickname']);
+      unset($_SESSION['username']);
       unset($_SESSION['user_name']);
       session_destroy();
       redirect('users/login');

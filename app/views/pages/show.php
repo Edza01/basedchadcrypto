@@ -14,11 +14,11 @@
 
 
 
-  <?php print_r($data['pages']->id); ?>
+  <?php echo $data['pages']->id; ?>
   <?php
 
-  if (isset($_SESSION['user_nickname'])) {
-    print_r($_SESSION['user_nickname']);
+  if (isset($_SESSION['username'])) {
+    print_r($_SESSION['username']);
   }
 
   ?>
@@ -39,6 +39,8 @@
   <?php if (isset($_SESSION['user_id'])) : ?>
 
     <form action="<?php echo URLROOT; ?>/pages/add" method="post">
+
+    <input type="hidden" name="page_id" value="<?php echo $data['pages']->id; ?>" />
 
       <div class="form-group">
         <label for="post_comment">Comment: <sup>*</sup></label>

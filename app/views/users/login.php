@@ -7,9 +7,9 @@
         <p>Please fill in your credentials to log in</p>
         <form action="<?php echo URLROOT; ?>/users/login" method="post">
           <div class="form-group">
-            <label for="nickname">nickname: <sup>*</sup></label>
-            <input type="nickname" name="nickname" class="form-control form-control-lg <?php echo (!empty($data['nickname_err'])) ? 'is-invalid' : ''; ?>" value="<?php echo $data['nickname']; ?>">
-            <span class="invalid-feedback"><?php echo $data['nickname_err']; ?></span>
+            <label for="username">username: <sup>*</sup></label>
+            <input type="username" name="username" class="form-control form-control-lg <?php echo (!empty($data['username_err'])) ? 'is-invalid' : ''; ?>" value="<?php echo $data['username']; ?>">
+            <span class="invalid-feedback"><?php echo $data['username_err']; ?></span>
           </div>
           <div class="form-group">
             <label for="password">Password: <sup>*</sup></label>
