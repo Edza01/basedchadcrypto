@@ -72,7 +72,7 @@
 
 
   <div class="card-container justify-content-center">
-    <?php foreach ($data['comments'] as $post) : ?>
+    <?php foreach ($data['commenttest'] as $post) : ?>
       <div class="card card-body mb-3 posts-container">
 
         <h4 class="card-title"><?php echo $post->post_comment; ?> <?php echo $country; ?></h4>

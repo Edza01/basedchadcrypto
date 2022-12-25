@@ -37,12 +37,15 @@ class Pages extends Controller
 
   public function show($id)
   {
-    $comment = $this->postModel->getPostsComments();
+    // $comment = $this->postModel->getPostsComments();
     $post = $this->postModel->getPostById($id);
+
+    $commenttest = $this->postModel->getCommentsFromPostWhere_page_id($id);
 
     $data = [
       'pages' => $post,
-      'comments' => $comment
+      // 'comments' => $comment,
+      'commenttest' => $commenttest
     ];
 
     $this->view('pages/show', $data);

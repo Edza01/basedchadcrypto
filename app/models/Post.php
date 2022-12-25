@@ -17,8 +17,6 @@ class Post
     return $results;
   }
 
- 
-
   public function getPostById($id)
   {
     $this->db->query('SELECT * FROM posts WHERE id = :id');
@@ -38,20 +36,31 @@ class Post
     return $results;
   }
 
+  // public function getPostsComments()
+  // {
+  //   $this->db->query('SELECT * FROM comments ORDER BY date DESC');
+
+  //   $results = $this->db->resultSet();
+
+  //   return $results;
+  // }
 
 
-  
- 
 
 
-   public function getPostsComments()
+  public function getCommentsFromPostWhere_page_id($page_id)
   {
-    $this->db->query('SELECT * FROM comments ORDER BY post_comment DESC');
+    $this->db->query("SELECT * FROM comments WHERE page_id = :page_id ORDER BY date DESC");
+    $this->db->bind(':page_id', $page_id);
 
     $results = $this->db->resultSet();
 
     return $results;
   }
+
+
+
+
   
   public function addComment($data)
   {
