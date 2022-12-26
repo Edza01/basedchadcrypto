@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: localhost
--- Generation Time: Dec 25, 2022 at 09:38 PM
+-- Generation Time: Dec 26, 2022 at 09:36 AM
 -- Server version: 10.4.27-MariaDB
 -- PHP Version: 8.1.12
 
@@ -72,7 +72,8 @@ INSERT INTO `comments` (`postid`, `user_id`, `post_comment`, `date`, `username`,
 (292, 18, '1', '2022-12-25 19:29:39', 'eeqweqw', 509),
 (293, 18, '222', '2022-12-25 22:25:00', 'eeqweqw', 509),
 (294, 18, 'D', '2022-12-25 22:25:18', 'eeqweqw', 538),
-(295, 18, 'Ddd', '2022-12-25 22:31:44', 'eeqweqw', 509);
+(295, 18, 'Ddd', '2022-12-25 22:31:44', 'eeqweqw', 509),
+(296, 18, 'D', '2022-12-26 10:31:53', 'eeqweqw', 509);
 
 -- --------------------------------------------------------
 
@@ -620,7 +621,7 @@ ALTER TABLE `users`
 -- AUTO_INCREMENT for table `comments`
 --
 ALTER TABLE `comments`
-  MODIFY `postid` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=296;
+  MODIFY `postid` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=297;
 
 --
 -- AUTO_INCREMENT for table `posts`
