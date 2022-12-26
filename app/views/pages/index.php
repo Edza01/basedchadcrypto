@@ -13,18 +13,18 @@
 
 
   <a href="<?php echo URLROOT; ?>/pages/show/<?php echo $single_post->id; ?>" class="card masonry-item">
-      <img class='masonry-card-image' src='public/img/<?php echo $single_post->image_name; ?>' alt='<?php echo $post->image_name; ?>'>
-        
-        <div class="card-overlay">
-          <div class="card-header">
-            <div class="card-header-text">
-              <h3 class="card-title"><?php echo $single_post->image_name; ?></h3>            
-              <span class="card-status"><?php echo $single_post->created_at; ?></span>
-            </div>
+    <img class='masonry-card-image' src='public/img/<?php echo $single_post->image_name; ?>' alt='<?php echo $post->image_name; ?>'>
+      
+      <div class="card-overlay">
+        <div class="card-header">
+          <div class="card-header-text">
+            <h3 class="card-title"><?php echo $single_post->image_name; ?></h3>            
+            <span class="card-status"><?php echo $single_post->created_at; ?></span>
           </div>
-          <p class="card-description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Asperiores, blanditiis?</p>
         </div>
-    </a>
+        <p class="card-description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Asperiores, blanditiis?</p>
+      </div>
+  </a>
 
 
   <div class="masonry">

@@ -31,10 +31,7 @@
     }
   }
 
-.masonry-item  img{
-    max-width: 100%;
-    border-radius: 5px;
-}
+
 
 @media only screen and (max-width: 320px){
     .masonry{
@@ -86,6 +83,11 @@
     list-style: none;
   }
   
+  .masonry-card-image {
+    width: 100%;
+    height: auto;
+  }
+
   .card {
     position: relative;
     display: block;
@@ -93,11 +95,6 @@
     border-radius: 40px;
     overflow: hidden;
     text-decoration: none;
-  }
-  
-  .masonry-card-image {
-    width: 100%;
-    height: auto;
   }
   
   .card-overlay {
@@ -122,7 +119,7 @@
     align-items: center;
     gap: 2em;
     padding: 2em;
-    border-radius: 40px 0 0 0;
+    border-radius: 40px 0 0 0 !important;
     background-color: white;
     transform: translateY(-100%);
     transition: .2s ease-in-out;
