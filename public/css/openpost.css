@@ -39,7 +39,8 @@
 
 
 .open-post-button,
-.regiser-inside-post-button {
+.regiser-inside-post-button,
+.categories-button {
     align-items: center;
     appearance: none;
     background-color: #FCFCFD;
@@ -71,18 +72,21 @@
 }
 
 .open-post-button:focus,
-.regiser-inside-post-button:focus {
+.regiser-inside-post-button:focus,
+.categories-button:focus {
     box-shadow: #D6D6E7 0 0 0 1.5px inset, rgba(45, 35, 66, 0.4) 0 2px 4px, rgba(45, 35, 66, 0.3) 0 7px 13px -3px, #D6D6E7 0 -3px 0 inset;
 }
 
 .open-post-button:hover,
-.regiser-inside-post-button:hover {
+.regiser-inside-post-button:hover,
+.categories-button:hover {
     box-shadow: rgba(45, 35, 66, 0.4) 0 4px 8px, rgba(45, 35, 66, 0.3) 0 7px 13px -3px, #D6D6E7 0 -3px 0 inset;
     transform: translateY(-2px);
 }
 
 .open-post-button:active,
-.regiser-inside-post-button:active {
+.regiser-inside-post-button:active,
+.categories-button:active {
     box-shadow: #D6D6E7 0 3px 7px inset;
     transform: translateY(2px);
 }
