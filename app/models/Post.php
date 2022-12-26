@@ -10,7 +10,7 @@ class Post
 
   public function getPosts($offset = 0)
   {
-    $this->db->query('SELECT * FROM posts ORDER BY created_at DESC LIMIT 30 OFFSET '. $offset);
+    $this->db->query('SELECT * FROM posts ORDER BY created_at DESC LIMIT 8 OFFSET '. $offset);
 
     $results = $this->db->resultSet();
 
@@ -38,14 +38,14 @@ class Post
 
 
   
-  public function getLatestPost()
-  {
-    $this->db->query('SELECT * FROM posts ORDER BY created_at DESC LIMIT 1');
+  // public function getLatestPost()
+  // {
+  //   $this->db->query('SELECT * FROM posts ORDER BY created_at DESC LIMIT 1');
     
-    $row = $this->db->single();
+  //   $row = $this->db->single();
 
-    return $row;
-  }
+  //   return $row;
+  // }
 
 
 

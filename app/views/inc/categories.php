@@ -58,7 +58,7 @@
         <div class='categories-content'>
             <i class='fa-solid fa-chart-line fa-2xl'></i>
             <h3>Who Accepts Crypto as Payment?</h3>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Labore, totam velit? Iure nemo labore inventore?</p>
+            <p>Businesses and organizations that accept cryptocurrency as payment.</p>
             <button class='categories-button' href='#'>Read More</button>
         </div>
     </div>

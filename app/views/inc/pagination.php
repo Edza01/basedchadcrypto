@@ -6,7 +6,7 @@
     $page = 0;
   }
 
-  $total_records_per_page = 30;
+  $total_records_per_page = 8;
 
   $offset = ($page - 1) * $total_records_per_page;
   $previous_page = $page - 1;
@@ -16,7 +16,7 @@
 
   $total_posts_obj = $this->postModel->getPostCount();
   $total_posts = $total_posts_obj[0]->{'count'};
-  $total_no_of_pages = ceil($total_posts / 30) - 1;
+  $total_no_of_pages = ceil($total_posts / 8) - 1;
   $second_last = $total_no_of_pages - 1; // total pages minus 1
 
   ?>
