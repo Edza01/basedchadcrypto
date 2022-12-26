@@ -27,8 +27,7 @@
               <div class="card-body">
                 <span class="card-body-tag-technology">Technology</span>
                 <h4>
-                  Why is the Tesla Cybertruck designed the way it
-                  is?
+                  <?php echo $post->post_header; ?>
                 </h4>
                 <p>
                   An exploration into the truck's polarising design
