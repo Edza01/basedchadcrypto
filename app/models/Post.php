@@ -36,14 +36,16 @@ class Post
     return $results;
   }
 
-  // public function getPostsComments()
-  // {
-  //   $this->db->query('SELECT * FROM comments ORDER BY date DESC');
 
-  //   $results = $this->db->resultSet();
+  
+  public function getLatestPost()
+  {
+    $this->db->query('SELECT * FROM posts ORDER BY created_at DESC LIMIT 1');
+    
+    $row = $this->db->single();
 
-  //   return $results;
-  // }
+    return $row;
+  }
 
 
 

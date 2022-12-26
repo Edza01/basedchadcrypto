@@ -3,12 +3,46 @@
 <div class="index-container">
 
 
+
+  <?php
+    $single_post = $data['singlepost'];
+  ?>
+
+
+  
+
+
+  <a href="<?php echo URLROOT; ?>/pages/show/<?php echo $single_post->id; ?>" class="card masonry-item">
+      <img class='masonry-card-image' src='public/img/<?php echo $single_post->image_name; ?>' alt='<?php echo $post->image_name; ?>'>
+        
+        <div class="card-overlay">
+          <div class="card-header">
+            <div class="card-header-text">
+              <h3 class="card-title"><?php echo $single_post->image_name; ?></h3>            
+              <span class="card-status"><?php echo $single_post->created_at; ?></span>
+            </div>
+          </div>
+          <p class="card-description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Asperiores, blanditiis?</p>
+        </div>
+    </a>
+
+
   <div class="masonry">
     <?php foreach ($data['posts'] as $post) : ?>
 
-      <a href="<?php echo URLROOT; ?>/pages/show/<?php echo $post->id; ?>" class="masonry-item">
-        <img class='masonry-post-image' src='public/img/<?php echo $post->image_name; ?>' alt='<?php echo $post->image_name; ?>'>
-      </a>
+      <a href="<?php echo URLROOT; ?>/pages/show/<?php echo $post->id; ?>" class="card masonry-item">
+        <img class='masonry-card-image' src='public/img/<?php echo $post->image_name; ?>' alt='<?php echo $post->image_name; ?>'>
+          
+          <div class="card-overlay">
+            <div class="card-header">
+              <div class="card-header-text">
+                <h3 class="card-title"><?php echo $post->image_name; ?></h3>            
+                <span class="card-status"><?php echo $post->created_at; ?></span>
+              </div>
+            </div>
+            <p class="card-description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Asperiores, blanditiis?</p>
+          </div>
+      </a>      
 
     <?php endforeach; ?>
   </div>
@@ -21,7 +55,7 @@
 
   
 
-
+  
 
 
 

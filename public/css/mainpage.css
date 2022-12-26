@@ -134,3 +134,7 @@ textarea:focus, input:focus{
 .masonry-post-image {
     width: 100%;
 }
+
+.single-post-image {
+    width: 100%;
+}

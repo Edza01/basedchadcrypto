@@ -31,3 +31,5 @@ ads: Ezoic Ads	Mediavine Ads
 https://blog.hubspot.com/sales/amazon-affiliate
 
 https://www.oberlo.com/blog/how-i-built-a-dropshipping-store-that-made-6667-in-under-8-weeks
+
+youtube.com/watch?v=4vJh0pf4SrY

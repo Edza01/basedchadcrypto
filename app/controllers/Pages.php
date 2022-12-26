@@ -10,14 +10,27 @@ class Pages extends Controller
   {
     if (isset($_GET['page']) && is_numeric($_GET['page']))
     {
-      $page = $_GET['page'];
+        $page = $_GET['page'];
+        
+        if ($page === '0')
+        {
+          $singlepost = $this->postModel->getLatestPost();
+          // get first post offset so can make latest post individualy big
+          $posts = $this->postModel->getPosts($page * 30 + 1);
 
-      $posts = $this->postModel->getPosts($page * 30);
+          $data = [
+            'posts' => $posts,
+            'singlepost' =>$singlepost
+          ];
+        }
+        else
+        {
+          $posts = $this->postModel->getPosts($page * 30);
 
-        $data = [
-          'posts' => $posts
-        ];
-
+          $data = [
+            'posts' => $posts
+          ];
+        }
 
         $this->view('pages/index', $data);
     }
@@ -25,9 +38,10 @@ class Pages extends Controller
     {
         // Get posts if no POST method was used
         $posts = $this->postModel->getPosts();
-
+        $singlepost = $this->postModel->getLatestPost();
         $data = [
-          'posts' => $posts
+          'posts' => $posts,
+          'singlepost' =>$singlepost
         ];
 
 
