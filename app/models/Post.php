@@ -66,10 +66,9 @@ class Post
   
   public function addComment($data)
   {
-    $this->db->query('INSERT INTO comments (post_comment, user_id, username, page_id) VALUES(:post_comment, :user_id, :username, :page_id)');
+    $this->db->query('INSERT INTO comments (post_comment, username, page_id) VALUES(:post_comment, :username, :page_id)');
     // Bind values
     $this->db->bind(':post_comment', $data['post_comment']);
-    $this->db->bind(':user_id', $data['user_id']);
     $this->db->bind(':username', $data['username']);
     $this->db->bind(':page_id', $data['page_id']);
 
