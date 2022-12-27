@@ -1,7 +1,15 @@
 <?php require APPROOT . '/views/inc/header.php'; ?>
 
-<div class="index-container">
 
+<div class="container-fluid">
+<?php
+  // echo uniqid('prefix');
+  echo $_SESSION['user_id'];
+ 
+?>
+</div>
+
+<div class="container">
 
   <div class="posts-wrapper">
 
@@ -32,21 +40,27 @@
                 <p>
                   An exploration into the truck's polarising design
                 </p>
-                <div class="user">
-                  <img src="https://yt3.ggpht.com/a/AGF-l7-0J1G0Ue0mcZMw-99kMeVuBmRxiPjyvIYONg=s900-c-k-c0xffffffff-no-rj-mo" alt="user" />
-                  <div class="user-info">
-                    <h5>Edgars Svarups</h5>
+                <div class='article-info'>
+                  
+                  <div class='like-container'>
+                    <p><?php echo 121; ?></p>
+                    <i class='fa-solid fa-heart fa-2xl'></i>
+                  </div>
 
+                  <div class='user-info'>
+                    
                     <?php 
                       $sql_date = new DateTime($post->created_at);
-                      $correct_date = $sql_date->format("Y-m-d");
+                      $correct_date = $sql_date->format('Y-m-d');
                     ?>
                     
-                    <small><?php echo $correct_date; ?></small>
+                    <p><?php echo $correct_date; ?></p>
+          
                   </div>
                 </div>
               </div>
             </div>
+            
           </a>
 
         <?php endforeach; ?>
@@ -80,6 +94,8 @@
     } else {
       echo' not allowed to access this file';
     }
+
+
   ?>
 
 

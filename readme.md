@@ -33,3 +33,12 @@ https://blog.hubspot.com/sales/amazon-affiliate
 https://www.oberlo.com/blog/how-i-built-a-dropshipping-store-that-made-6667-in-under-8-weeks
 
 youtube.com/watch?v=4vJh0pf4SrY
+
+
+
+lunafreyava {
+  https://www.fiverr.com/lunafreyava/record-a-dynamic-female-american-voice-over?context_referrer=search_gigs&source=top-bar&ref_ctx_id=e240babaa2e2b9916c31c79cee13d232&pckg_id=1&pos=13&context_type=auto&funnel=e240babaa2e2b9916c31c79cee13d232&imp_id=7ed63626-b895-4389-b767-63d8c2ec0032
+}
+
+
+https://www.godaddy.com/en-uk

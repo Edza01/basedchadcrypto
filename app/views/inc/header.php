@@ -18,7 +18,8 @@
 
 <body>
   <?php require APPROOT . '/views/inc/navbar.php'; ?>
-  <div class="container">
+  <!-- <div class="container"> -->
+  <div>
 
   <?php
     $current_url = $_SERVER['REQUEST_URI'];

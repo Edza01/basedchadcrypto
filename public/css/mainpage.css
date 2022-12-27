@@ -1,13 +1,11 @@
 body {
     font-family: Tahoma, sans-serif;
-  }
+}
 
 .main-text {
     text-align: justify;
     font-size: 1rem;
 }
-
-
 
 .pagination-centred {
     display: flex;
@@ -23,65 +21,12 @@ body {
     padding: 3rem;
 }
 
-
-
-textarea:focus, input:focus{
+textarea:focus,
+input:focus {
     outline: none;
 }
 
-.button-change-page {
-    align-items: center;
-    appearance: none;
-    background-color: #FCFCFD;
-    border-radius: 4px;
-    border-width: 0;
-    box-shadow: rgba(45, 35, 66, 0.4) 0 2px 4px, rgba(45, 35, 66, 0.3) 0 7px 13px -3px, #D6D6E7 0 -3px 0 inset;
-    box-sizing: border-box;
-    color: #36395A;
-    cursor: pointer;
-    display: inline-flex;
-    font-family: "JetBrains Mono", monospace;
-    height: 48px;
-    justify-content: center;
-    line-height: 1;
-    list-style: none;
-    overflow: hidden;
-    padding-left: 16px;
-    padding-right: 16px;
-    position: relative;
-    text-align: left;
-    text-decoration: none;
-    transition: box-shadow .15s, transform .15s;
-    user-select: none;
-    -webkit-user-select: none;
-    touch-action: manipulation;
-    white-space: nowrap;
-    will-change: box-shadow, transform;
-    font-size: 18px;
-}
-
-.button-change-page:focus {
-    box-shadow: #D6D6E7 0 0 0 1.5px inset, rgba(45, 35, 66, 0.4) 0 2px 4px, rgba(45, 35, 66, 0.3) 0 7px 13px -3px, #D6D6E7 0 -3px 0 inset;
-}
-
-.button-change-page:hover {
-    box-shadow: rgba(45, 35, 66, 0.4) 0 4px 8px, rgba(45, 35, 66, 0.3) 0 7px 13px -3px, #D6D6E7 0 -3px 0 inset;
-    transform: translateY(-2px);
-}
-
-.button-change-page:active {
-    box-shadow: #D6D6E7 0 3px 7px inset;
-    transform: translateY(2px);
-}
-
-
-
-
-
-
-
 .pagination {
-   
     padding-left: 0;
     margin: 20px 0;
     border-radius: 4px;
@@ -91,10 +36,17 @@ textarea:focus, input:focus{
     align-items: center;
     flex-wrap: wrap;
 }
+
 .pagination>li {
     display: inline;
 }
-.pagination>.active>a, .pagination>.active>a:focus, .pagination>.active>a:hover, .pagination>.active>span, .pagination>.active>span:focus, .pagination>.active>span:hover {
+
+.pagination>.active>a,
+.pagination>.active>a:focus,
+.pagination>.active>a:hover,
+.pagination>.active>span,
+.pagination>.active>span:focus,
+.pagination>.active>span:hover {
     z-index: 3;
     color: #fff;
     cursor: default;
@@ -106,7 +58,8 @@ textarea:focus, input:focus{
     cursor: not-allowed;
 }
 
-.pagination>li>a, .pagination>li>span {
+.pagination>li>a,
+.pagination>li>span {
     position: relative;
     float: left;
     padding: 6px 12px;
@@ -117,12 +70,16 @@ textarea:focus, input:focus{
     background-color: #fff;
     border: 1px solid #ddd;
 }
-.pagination>li:first-child>a, .pagination>li:first-child>span {
+
+.pagination>li:first-child>a,
+.pagination>li:first-child>span {
     margin-left: 0;
     border-top-left-radius: 4px;
     border-bottom-left-radius: 4px;
 }
-.pagination>li:last-child>a, .pagination>li:last-child>span {
+
+.pagination>li:last-child>a,
+.pagination>li:last-child>span {
     border-top-right-radius: 4px;
     border-bottom-right-radius: 4px;
 }
@@ -139,3 +96,8 @@ textarea:focus, input:focus{
     width: 100%;
 }
 
+
+.container-fluid {
+    background-color: #f07070;
+    height: 300px;
+}

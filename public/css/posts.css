@@ -10,7 +10,7 @@
 
   background-color: #cbcbcbe4;
   border-radius: 0px 40px 40px 0px;
-  
+
   padding: 1rem;
 }
 
@@ -59,9 +59,12 @@
     column-count: 2;
     border-radius: 40px;
   }
-  
+
   .categories-container {
     border-radius: 40px !important;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem;
   }
 
   .posts-wrapper {
@@ -69,8 +72,7 @@
     grid-template-columns: 1fr;
   }
 
-  .posts-wrapper .posts-wrapper-inner:nth-of-type(1)
-  {
+  .posts-wrapper .posts-wrapper-inner:nth-of-type(1) {
     order: 1;
   }
 }
@@ -85,6 +87,8 @@
 
   .categories-container {
     border-radius: 40px;
+    display: grid;
+    grid-template-columns: 1fr;
   }
 
   .posts-wrapper {
@@ -92,14 +96,13 @@
     grid-template-columns: 1fr;
   }
 
-  .posts-wrapper .posts-wrapper-inner:nth-of-type(1)
-  {
+  .posts-wrapper .posts-wrapper-inner:nth-of-type(1) {
     order: 1;
   }
 }
 
 
-.masonry-main-header{
+.masonry-main-header {
   display: flex;
   flex-direction: row;
   justify-content: space-around;
@@ -184,7 +187,13 @@
   margin-bottom: 15px;
 }
 
-.fa-chart-line, .fa-wallet, .fa-person-chalkboard, .fa-right-left, .fa-calculator, .fa-person-circle-question, .fa-money-bills {
+.fa-chart-line,
+.fa-wallet,
+.fa-person-chalkboard,
+.fa-right-left,
+.fa-calculator,
+.fa-person-circle-question,
+.fa-money-bills {
   color: white;
   padding: 1.5rem;
 }
@@ -196,13 +205,15 @@
   border-radius: 10px;
   box-shadow: 0 2px 20px rgba(0, 0, 0, 0.2);
   overflow: hidden;
-  width: 300px;
+  width: 100%;
 }
+
 .card-header img {
   width: 100%;
   height: 200px;
   object-fit: cover;
 }
+
 .card-body {
   display: flex;
   flex-direction: column;
@@ -228,20 +239,36 @@
   font-size: 13px;
   margin: 0 0 40px;
 }
-.user {
+
+.article-info {
   display: flex;
   margin-top: auto;
+  flex-direction: row-reverse;
+  justify-content: space-between;
+  width: 100%;
+  align-items: flex-end;
+  margin-bottom: -2rem;
 }
 
-.user img {
+.fa-heart {
   border-radius: 50%;
   width: 40px;
   height: 40px;
-  margin-right: 10px;
+  color: #f04b4b;
 }
+
 .user-info h5 {
   margin: 0;
 }
+
 .user-info small {
   color: #545d7a;
+}
+
+.like-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-top: 0.1rem;
+  gap: 10px;
 }

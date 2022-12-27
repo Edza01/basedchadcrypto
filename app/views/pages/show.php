@@ -3,7 +3,7 @@
 <?php flash('post_message'); ?>
 
 
-<div class='show-container'>
+<div class='container'>
   <!-- <button onclick="myFunction()" class="btn btn-light"><i class="fa fa-backward"></i> Back</button> -->
 
 

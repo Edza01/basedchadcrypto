@@ -161,7 +161,7 @@
     }
 
     public function createUserSession($user){
-      $_SESSION['user_id'] = $user->id;
+      $_SESSION['user_id'] = uniqid(uniqid($user->id).rand(100324, 1003204234));
       $_SESSION['username'] = $user->username;
       $_SESSION['user_name'] = $user->name;
       redirect('pages');
