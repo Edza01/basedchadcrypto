@@ -1,12 +1,13 @@
 <?php require APPROOT . '/views/inc/header.php'; ?>
 
 
-<div class="container-fluid">
-<?php
-  // echo uniqid('prefix');
-  echo $_SESSION['user_id'];
- 
-?>
+<div class="container-fluid mainpage-main-container">
+
+</div>
+
+
+<div class="container-fluid mainpage-video-container">
+
 </div>
 
 <div class="container">

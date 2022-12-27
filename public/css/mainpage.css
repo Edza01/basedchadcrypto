@@ -97,7 +97,12 @@ input:focus {
 }
 
 
-.container-fluid {
+.mainpage-video-container {
+    
+    height: 500px;
+}
+
+.mainpage-main-container {
     background-color: #f07070;
-    height: 300px;
+    height: 500px;
 }

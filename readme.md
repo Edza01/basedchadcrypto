@@ -42,3 +42,11 @@ lunafreyava {
 
 
 https://www.godaddy.com/en-uk
+
+
+https://namelix.com/app/?keywords=edgars
+
+
+
+
+SPIKOT NO SEJIENES: https://learncrypto.com/
