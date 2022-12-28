@@ -49,4 +49,11 @@ https://namelix.com/app/?keywords=edgars
 
 
 
-SPIKOT NO SEJIENES: https://learncrypto.com/
+SPIKOT NO SEJIENES: https://learncrypto.com/, https://academy.moralis.io/blog
+
+
+
+https://www.reddit.com/r/CryptoCurrency/comments/ywfi52/why_i_am_strongly_against_crypto_regulation/
+
+
+https://www.fiverr.com/alicia_20/creat-an-animated-video-for-you?context_referrer=search_gigs_with_recommendations_row_1&source=top-bar&ref_ctx_id=0aca877e1f3cd2788b71f4adcb33fa77&pckg_id=1&pos=28&context_type=auto&funnel=0aca877e1f3cd2788b71f4adcb33fa77&seller_online=true&imp_id=18b0cba3-cec9-420e-8cfa-bf9d7b7c8e28

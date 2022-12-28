@@ -1,16 +1,9 @@
 <?php require APPROOT . '/views/inc/header.php'; ?>
 
 
-<div class="container-fluid mainpage-main-container">
+<div class="container container-main-sub-info">
 
-</div>
-
-
-<div class="container-fluid mainpage-video-container">
-
-</div>
-
-<div class="container">
+  <?php require APPROOT . '/views/inc/aboutus.php'; ?>
 
   <div class="posts-wrapper">
 
