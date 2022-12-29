@@ -1,17 +1,6 @@
 <div class='categories-card'>
     <div class='categories-box'>
         <div class='categories-content'>
-            <i class='fa-solid fa-person-chalkboard fa-2xl'></i>
-            <h3>Crypto Guides</h3>
-            <p>Learn about cryptocurrency and investing with our crypto guide.</p>
-            
-        </div>
-    </div>
-</div>
-
-<div class='categories-card'>
-    <div class='categories-box'>
-        <div class='categories-content'>
             <i class='fa-solid fa-wallet fa-2xl'></i>
             <h3>Crypto wallets</h3>
             <p>Learn about different types of crypto wallets.</p>

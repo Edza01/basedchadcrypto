@@ -64,7 +64,7 @@ class Pages extends Controller
 
     $this->view('pages/tldr', $data);
   }
-  
+
   public function learn()
   {
     $data = [
@@ -73,7 +73,6 @@ class Pages extends Controller
 
     $this->view('pages/learn', $data);
   }
-
 
 
 
