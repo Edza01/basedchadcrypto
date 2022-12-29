@@ -13,6 +13,8 @@
   <link rel="stylesheet" href="<?php echo URLROOT; ?>/public/css/posts.css">
   <link rel="stylesheet" href="<?php echo URLROOT; ?>/public/css/openpost.css">
   <link rel="stylesheet" href="<?php echo URLROOT; ?>/public/css/mainpage.css">
+  <link rel="stylesheet" href="<?php echo URLROOT; ?>/public/css/tldr.css">
+  <link rel="stylesheet" href="<?php echo URLROOT; ?>/public/css/learn.css">
   <title><?php echo SITENAME; ?></title>
 </head>
 

@@ -1,0 +1,110 @@
+.pages-main-header-container {
+    background-color: rgb(228, 228, 228);
+    box-shadow: rgba(0, 0, 0, 0.35) 0px -50px 36px -28px inset;
+    padding: 3rem;
+    text-align: center;
+}
+
+.page-hr {
+    border: 0;
+    height: 3px;
+    background: #333;
+    background-image: linear-gradient(to right, #ccc, #333, #ccc);
+    max-width: 40rem;
+}
+
+.faq-list>div:last-child {
+    border: unset;
+}
+
+.faq-list>div {
+    padding: 1.5em 0em;
+    border-bottom: 0.04rem solid #ededed;
+}
+
+details>summary {
+    list-style: none;
+}
+
+details>summary::-webkit-details-marker {
+    display: none;
+}
+
+summary {
+    font-size: 1.6rem;
+    cursor: pointer;
+    font-weight: bold;
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    transition: all 0.3s ease;
+}
+
+summary:hover {
+    color: #b72929;
+}
+
+details[open] summary~* {
+    animation: slide-in-animation 1.3s ease-out forwards;
+}
+
+@keyframes slide-in-animation {
+	20% {
+		opacity: 0;
+	}
+	60% {
+		transform: translateX(10%);
+	}
+	75% {
+		transform: translateX(5%);
+	}
+	100% {
+		opacity: 1;
+		transform: translateX(0%);
+	}
+}
+
+details[open] summary {
+    color: #bd2f2f;
+}
+
+details[open] p {
+    border-left: 2px solid #e31b1b;
+    margin-left: 50px;
+    padding-left: 25px;
+    opacity: 100;
+    transition: all 3s ease;
+}
+
+details[open] summary:after {
+    content: "-";
+    font-size: 3.2rem;
+    margin: -33px 0.35em 0 0;
+    font-weight: 200;
+}
+
+summary::-webkit-details-marker {
+    display: none;
+}
+
+summary:after {
+    border-radius: 0.1rem;
+    content: "+";
+    font-size: 1.8rem;
+    margin: -0.3rem 0.65rem 0 0;
+    padding: 0;
+    font-weight: bold;
+    width: 31px;
+    text-align: center;
+    color: #b02424;
+    float: left;
+}
+
+.faq-list {
+    width: 100%;
+    margin: 1em auto;
+    padding: 2em 0;
+}

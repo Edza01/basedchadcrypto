@@ -56,6 +56,27 @@ class Pages extends Controller
     $this->view('pages/about', $data);
   }
 
+  public function tldr()
+  {
+    $data = [
+      'title' => 'tldr'
+    ];
+
+    $this->view('pages/tldr', $data);
+  }
+  
+  public function learn()
+  {
+    $data = [
+      'title' => 'learn'
+    ];
+
+    $this->view('pages/learn', $data);
+  }
+
+
+
+
 
   public function add()
   {

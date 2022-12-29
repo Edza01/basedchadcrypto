@@ -9,19 +9,11 @@
         <ul class="navbar-nav mr-auto">
 
           <li class="nav-item">
-            <a class="nav-link" href="<?php echo URLROOT; ?>/pages/about">TLDR</a>
+            <a class="nav-link" href="<?php echo URLROOT; ?>/pages/tldr">TLDR</a>
           </li>
 
           <li class="nav-item">
-            <a class="nav-link" href="<?php echo URLROOT; ?>/pages/about">Learn</a>
-          </li>
-
-          <li class="nav-item">
-            <a class="nav-link" href="<?php echo URLROOT; ?>/pages/about">Tips</a>
-          </li>
-
-          <li class="nav-item">
-            <a class="nav-link" href="<?php echo URLROOT; ?>/pages/about">Resources</a>
+            <a class="nav-link" href="<?php echo URLROOT; ?>/pages/learn">Learn</a>
           </li>
           
         </ul>

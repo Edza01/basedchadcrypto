@@ -10,6 +10,6 @@
   // URL Root
   define('URLROOT', 'https://localhost/cryptonews');
   // Site Name
-  define('SITENAME', 'cryptonews');
+  define('SITENAME', 'BasedChadCrypto');
   // App Version
   define('APPVERSION', '1.0.0');

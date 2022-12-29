@@ -2,7 +2,9 @@
     display: block;
     margin-left: auto;
     margin-right: auto;
-    width: 90%;
+    max-width: 80%;
+    max-height: 600px;
+    padding-top: 2rem;
 }
 
 
@@ -25,6 +27,15 @@
 }
 
 
+.show-page-text p {
+    text-align: justify;
+    line-height: 170%;
+    letter-spacing: -.02em;
+}
+
+.show-page-text {
+    padding-bottom: 1rem;
+}
 
 
 .card-container {

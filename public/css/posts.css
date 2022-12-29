@@ -86,10 +86,13 @@
   }
 
   .categories-container {
-    border-radius: 40px;
+    
     display: grid;
     grid-template-columns: 1fr;
+
   }
+
+
 
   .posts-wrapper {
     display: grid;
@@ -226,6 +229,10 @@
   min-height: 250px;
 }
 
+.card-body-header {
+  padding-top: 1rem;
+}
+
 .card-body-tag-technology {
   background-color: #f07070;
   border-radius: 50px;
@@ -253,12 +260,7 @@
   margin-bottom: -2rem;
 }
 
-.fa-heart {
-  border-radius: 50%;
-  width: 40px;
-  height: 40px;
-  color: #f04b4b;
-}
+
 
 .user-info h5 {
   margin: 0;
@@ -268,10 +270,3 @@
   color: #545d7a;
 }
 
-.like-container {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  padding-top: 0.1rem;
-  gap: 10px;
-}

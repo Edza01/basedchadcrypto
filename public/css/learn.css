@@ -1,0 +1,62 @@
+.container-learn {
+    background-color: aqua;
+}
+
+.learn-container .learn-card {
+    position: relative;
+    min-width: 320px;
+    height: 340px;
+    box-shadow: rgba(0, 0, 0, 0.2) 0px 29px 70px -10px;
+    border-radius: 40px !important;
+    margin-top: 0;
+    transition: 0.5s;
+    margin-bottom: 1rem;
+}
+
+.learn-container .learn-card .learn-box {
+    position: absolute;
+    background: #2a2b2f;
+    border-radius: 40px !important;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    transition: 0.5s;
+    top: 18px;
+    left: 18px;
+    right: 18px;
+    bottom: 18px;
+}
+
+.learn-container .learn-card .learn-box:hover {
+    transform: translateY(-30px);
+}
+
+.learn-container .learn-card .learn-box .learn-content {
+    padding: 20px;
+    text-align: center;
+}
+
+.learn-container .learn-card .learn-box .learn-content p {
+    font-size: 1rem;
+    font-weight: 300;
+    color: rgba(255, 255, 255, 0.9);
+    z-index: 1;
+    transition: 0.5s;
+}
+
+.learn-container .learn-card .learn-box .learn-content h3 {
+    font-size: 1.6rem;
+    color: #fff;
+    z-index: 1;
+    transition: 0.5s;
+    margin-bottom: 15px;
+}
+
+
+.learn-outer-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 1rem;
+    padding-top: 3rem;
+}
