@@ -4,6 +4,10 @@
 
 
 <div class="container container-main-sub-info">
+  
+  <h1 class='main-page-h1'>Follow the &#128007</h1>
+  
+
 
   <?php require APPROOT . '/views/inc/aboutus.php'; ?>
 
