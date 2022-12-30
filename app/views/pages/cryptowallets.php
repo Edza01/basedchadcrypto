@@ -4,8 +4,11 @@
 <div class="container-fluid pages-main-header-container">
     <h1>Crypto Wallets & Crypto Exchanges</h1>
     <hr class="page-hr">
-    <h2>What crypto wallet should i use</h2>
+    <h2>Learn about differences of crypto wallets.</h2>
 </div>
+
+<img src='<?php echo URLROOT; ?>/public/postimages/stock-market-gdf07cc329_1920.webp' alt='cryptowallets' class='open-post-image'> 
+
 
 <div class="container learn-pagination">
     <br>
@@ -67,7 +70,7 @@
     </p>
 
     <p>
-        I use hardware wallets because they provide an extra layer of security for my cryptocurrency. 
+        I use Trezor and Ledger hardware wallets because they provide an extra layer of security for my cryptocurrency. 
         When you first create a wallet on a hardware device, it generates a seed key, which is a list of 
         random words that are displayed on the device's screen. This ensures that no hacker can access the key, 
         as it is not stored on your smartphone or computer. It's important to write down the seed key and 

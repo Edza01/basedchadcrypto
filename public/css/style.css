@@ -4,5 +4,10 @@ body {
 
 .learn-pagination {
     text-align: justify;
-    padding: 1rem;
+    text-justify: auto;
+    padding: 2rem;
+}
+
+.whoacceptscrypto-li {
+    padding: 2rem;
 }
