@@ -2,3 +2,7 @@ body {
     background: #ebebeb;
 }
 
+.learn-pagination {
+    text-align: justify;
+    padding: 1rem;
+}

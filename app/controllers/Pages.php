@@ -74,6 +74,16 @@ class Pages extends Controller
     $this->view('pages/learn', $data);
   }
 
+  public function cryptowallets()
+  {
+    $data = [
+      'title' => 'crypto wallets'
+    ];
+
+    $this->view('pages/cryptowallets', $data);
+  }
+
+
 
 
 

@@ -1,57 +1,27 @@
-<div class='categories-card'>
-    <div class='categories-box'>
-        <div class='categories-content'>
-            <i class='fa-solid fa-wallet fa-2xl'></i>
-            <h3>Crypto wallets</h3>
-            <p>Learn about different types of crypto wallets.</p>
-            
+<a href="<?php echo URLROOT; ?>/pages/cryptowallets">
+    <div class='categories-card'>
+        <div class='categories-box'>
+            <div class='categories-content'>
+                <i class='fa-solid fa-wallet fa-2xl'></i>
+                <h3>Crypto wallets & Crypto Exchanges</h3>
+                <p>Learn about different types of crypto wallets.</p>
+            </div>
         </div>
     </div>
-</div>
+</a>
 
-<div class='categories-card'>
-    <div class='categories-box'>
-        <div class='categories-content'>
-            <i class='fa-solid fa-chart-line fa-2xl'></i>
-            <h3>Crypto Predictions</h3>
-            <p>Learn about crypto predictions for the future.</p>
-            
+<a href="<?php echo URLROOT; ?>/pages/cryptowallets"">
+    <div class='categories-card'>
+        <div class='categories-box'>
+            <div class='categories-content'>
+                <i class="fa-solid fa-person-circle-question fa-2xl"></i>
+                <h3>Who Accepts Crypto as Payment?</h3>
+                <p>Businesses and organizations that accept cryptocurrency as payment.</p>
+                
+            </div>
         </div>
     </div>
-</div>
-
-<div class='categories-card'>
-    <div class='categories-box'>
-        <div class='categories-content'>
-            <i class="fa-solid fa-right-left fa-2xl"></i>
-            <h3>Crypto Exchanges</h3>
-            <p>Platforms for buying, selling, and trading cryptocurrencies.</p>
-            
-        </div>
-    </div>
-</div>
-
-<div class='categories-card'>
-    <div class='categories-box'>
-        <div class='categories-content'>
-            <i class="fa-solid fa-calculator fa-2xl"></i>
-            <h3>Crypto Profit Calculator</h3>
-            <p>Calculate cryptocurrency profit or loss.</p>
-            
-        </div>
-    </div>
-</div>
-
-<div class='categories-card'>
-    <div class='categories-box'>
-        <div class='categories-content'>
-            <i class="fa-solid fa-person-circle-question fa-2xl"></i>
-            <h3>Who Accepts Crypto as Payment?</h3>
-            <p>Businesses and organizations that accept cryptocurrency as payment.</p>
-            
-        </div>
-    </div>
-</div>
+</a>
 
 <div class='categories-card'>
     <div class='categories-box'>
@@ -64,3 +34,14 @@
     </div>
 </div>
 
+
+<div class='categories-card'>
+    <div class='categories-box'>
+        <div class='categories-content'>
+            <i class="fa-solid fa-calculator fa-2xl"></i>
+            <h3>Crypto Profit Calculator</h3>
+            <p>Calculate cryptocurrency profit or loss.</p>
+            
+        </div>
+    </div>
+</div>
