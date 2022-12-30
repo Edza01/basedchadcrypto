@@ -37,5 +37,17 @@
     </div>
 </a>
 
+<a href="<?php echo URLROOT; ?>/pages/cryptoscams">
+    <div class='categories-card'>
+        <div class='categories-box'>
+            <div class='categories-content'>
+                <i class="fa-solid fa-person-circle-question fa-2xl"></i>
+                <h3>Common Crypto Scams</h3>
+                <p>Scams often involve financial gain, and this is also true in the world of cryptocurrency.</p>
+            </div>
+        </div>
+    </div>
+</a>
+
 
 

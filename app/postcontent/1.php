@@ -17,11 +17,6 @@
     It can be argued that every instance of government regulation in the cryptocurrency space has been a way for insiders to take advantage of and monitor everyday users, while claiming to be motivated by "consumer protection."
 </p>
 
-
-<p>
-    The failure of FTX highlights the potential for government regulation to be utilized to the advantage of certain individuals while disguising itself as consumer protection. As a result, I am opposed to the regulation of cryptocurrencies. The government has not demonstrated that it is committed to the overall well-being of the market, and its actions have been inconsistent and unclear, with retroactive enforcement and a lack of transparency.
-</p>
-
 <p>
     The collapse of FTX may be one of the most blatant examples of government regulation being used to benefit insiders while claiming to protect consumers. I am opposed to cryptocurrency regulation because the government has not shown that it has the best interests of the market as a whole in mind. Their actions have been inconsistent and opaque, with retroactive enforcement and lack of clarity. 
 </p>

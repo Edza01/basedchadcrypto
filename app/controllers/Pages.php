@@ -100,7 +100,16 @@ class Pages extends Controller
 
     $this->view('pages/bestprivacycoin', $data);
   }
+  
+  public function cryptoscams()
+  {
+    $data = [
+      'title' => 'crypto scams'
+    ];
 
+    $this->view('pages/cryptoscams', $data);
+  }
+  
 
 
 
