@@ -79,4 +79,16 @@ class Post
       return false;
     }
   }
+
+
+  public function getRelatedPostsWhere_page_id($page_id)
+  {
+    $this->db->query("SELECT * FROM comments WHERE page_id = :page_id ORDER BY date DESC");
+    $this->db->bind(':page_id', $page_id);
+
+    $results = $this->db->resultSet();
+
+    return $results;
+  }
+
 }
