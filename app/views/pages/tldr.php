@@ -49,6 +49,16 @@
                 <p class="faq-content">It is generally not recommended to share your private keys with anyone. Private keys are a crucial part of cryptocurrency security, as they are used to access and control your cryptocurrency assets. If you share your private keys with someone else, you are giving them access to your assets and potentially allowing them to make transactions on your behalf. This could result in the loss or theft of your cryptocurrency.</p>
             </details>
         </div>
+        <div>
+            <details>
+                <summary title="What are the parking and public transport options?">What is the blockchain?</summary>
+                <p class="faq-content">The blockchain is a decentralized, secure and transparent network that enables fast peer-to-peer transactions of digital values, such as currency and data. Its main purpose is to provide a trusted platform for the exchange of these digital assets.</p>
+            </details>
+        </div>
+
+
+
+
     </div>
 
 </div>

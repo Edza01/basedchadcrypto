@@ -49,5 +49,19 @@
     </div>
 </a>
 
+<a href="<?php echo URLROOT; ?>/pages/blockchain">
+    <div class='categories-card'>
+        <div class='categories-box'>
+            <div class='categories-content'>
+                <i class="fa-solid fa-person-circle-question fa-2xl"></i>
+                <h3>What is the blockchain?</h3>
+                <p>Blockchain - a tool with many purposes.</p>
+            </div>
+        </div>
+    </div>
+</a>
+
+
+
 
 

@@ -109,8 +109,45 @@ class Pages extends Controller
 
     $this->view('pages/cryptoscams', $data);
   }
-  
+    
+  public function blockchain()
+  {
+    $data = [
+      'title' => 'blockchain'
+    ];
 
+    $this->view('pages/blockchain', $data);
+  }
+
+  public function blockhainvsbanks()
+  {
+    $data = [
+      'title' => 'blockhainvsbankss'
+    ];
+
+    $this->view('pages/blockhainvsbanks', $data);
+  }
+
+  public function whatisnft()
+  {
+    $data = [
+      'title' => 'whatisnft'
+    ];
+
+    $this->view('pages/whatisnft', $data);
+  }
+
+  public function cryptojacking()
+  {
+    $data = [
+      'title' => 'cryptojacking'
+    ];
+
+    $this->view('pages/cryptojacking', $data);
+  }
+  
+  
+  
 
 
 

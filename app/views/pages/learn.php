@@ -66,6 +66,69 @@
         </div>
     </a>
 
+    <a href="<?php echo URLROOT; ?>/pages/blockchain">
+        <div class="learn-container">
+            <div class='learn-card'>
+                <div class='learn-box'>
+                    <div class='learn-content'>
+                        <i class="fa-solid fa-person-circle-question fa-2xl"></i>
+                        <h3>What is the blockchain?</h3>
+                        <p>Blockchain - a tool with many purposes.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </a>
+
+    <a href="<?php echo URLROOT; ?>/pages/blockhainvsbanks">
+        <div class="learn-container">
+            <div class='learn-card'>
+                <div class='learn-box'>
+                    <div class='learn-content'>
+                        <i class="fa-solid fa-person-circle-question fa-2xl"></i>
+                        <h3>Blockchain vs Banks</h3>
+                        <p>Blockchain eliminates the need for middlemen.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </a>
+
+    <a href="<?php echo URLROOT; ?>/pages/whatisnft">
+        <div class="learn-container">
+            <div class='learn-card'>
+                <div class='learn-box'>
+                    <div class='learn-content'>
+                        <i class="fa-solid fa-person-circle-question fa-2xl"></i>
+                        <h3>What is an NFT?</h3>
+                        <p>NFTs gained popularity in 2020 and have continued to grow in popularity since then.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </a>
+
+    <a href="<?php echo URLROOT; ?>/pages/cryptojacking">
+        <div class="learn-container">
+            <div class='learn-card'>
+                <div class='learn-box'>
+                    <div class='learn-content'>
+                        <i class="fa-solid fa-person-circle-question fa-2xl"></i>
+                        <h3>Cryptojacking or Cryptomining malware</h3>
+                        <p>Malicious websites could be using your CPU to mine cryptocurrencies.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </a>
+
+
+    
+
+    
+
+
+   
    
 
 
