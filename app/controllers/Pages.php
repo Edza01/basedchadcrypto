@@ -145,6 +145,15 @@ class Pages extends Controller
 
     $this->view('pages/cryptojacking', $data);
   }
+
+  public function nextcryptocurrencytoexplode()
+  {
+    $data = [
+      'title' => 'cryptojacking'
+    ];
+
+    $this->view('pages/nextcryptocurrencytoexplode', $data);
+  }
   
   
   

@@ -60,3 +60,10 @@ https://www.fiverr.com/alicia_20/creat-an-animated-video-for-you?context_referre
 
 
 https://analytics.google.com/analytics/web/provision/#/provision
+
+
+https://stackoverflow.com/questions/67923678/is-the-expect-ct-http-header-still-relevant-in-2021
+
+https://github.com/google/certificate-transparency-community-site/blob/master/docs/google/getting-started.md
+
+https://certificate.transparency.dev/howctworks/

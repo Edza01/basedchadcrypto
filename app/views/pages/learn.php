@@ -122,6 +122,20 @@
         </div>
     </a>
 
+    <a href="<?php echo URLROOT; ?>/pages/nextcryptocurrencytoexplode">
+        <div class="learn-container">
+            <div class='learn-card'>
+                <div class='learn-box'>
+                    <div class='learn-content'>
+                        <i class="fa-solid fa-person-circle-question fa-2xl"></i>
+                        <h3>Crypto predictions 2023</h3>
+                        <p>Is This The Bottom For crypto?</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </a>
+    
 
     
 
