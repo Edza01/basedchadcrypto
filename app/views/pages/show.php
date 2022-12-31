@@ -29,15 +29,20 @@
     // After making a path 'real' you can check the path if it is in the 
     // expected part of the file system and then safely use it for file_get_contents().
 
-    $wanted = $_GET['path'];
-    $real = realpath(APPROOT.'/postcontent/'.$data['pages']->id.'.php' . $wanted);
-    if (strpos($real, APPROOT.'/postcontent/1.php') === 0) {
-      echo '<div class="show-page-text">';
-      echo file_get_contents($real);
-      echo '</div>';
-    } else {
-      echo' not allowed to access this file';
+    
+    if (is_numeric($data['pages']->id ))
+    {
+      $wanted = $_GET['path'];
+      $real = realpath(APPROOT.'/postcontent/'.$data['pages']->id.'.php' . $wanted);
+      if (strpos($real, APPROOT.'/postcontent/'.$data['pages']->id.'.php') === 0) {
+        echo '<div class="show-page-text">';
+        echo file_get_contents($real);
+        echo '</div>';
+      } else {
+        echo' not allowed to access this file';
+      }   
     }
+   
 
 
   ?>

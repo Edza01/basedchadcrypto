@@ -38,7 +38,7 @@
 <br>
 <li>Install a browser extension that blocks cryptocurrency mining scripts. These extensions can help prevent your computer from being used to mine cryptocurrency without your knowledge or consent.</li>
 <br>
-<li>Enable JavaScrilit blocking in your browser. Cryptocurrency mining scripts often rely on javaScript, so disabling it can help prevent your device from being used for mining.</li>
+<li>Enable javaScript blocking in your browser. Cryptocurrency mining scripts often rely on javaScript, so disabling it can help prevent your device from being used for mining.</li>
 <br>
 <li>Be cautious when visiting unfamiliar websites. Avoid clicking on links or downloading files from untrustworthy sources, as these may contain cryptocurrency mining code.</li>
 <br>

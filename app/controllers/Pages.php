@@ -152,7 +152,7 @@ class Pages extends Controller
       'title' => 'cryptojacking'
     ];
 
-    $this->view('pages/nextcryptocurrencytoexplode', $data);
+    $this->view('pages/whatisethereum', $data);
   }
   
   

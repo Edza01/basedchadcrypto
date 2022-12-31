@@ -14,6 +14,8 @@
     <br>
     <h2>Crypto exchanges</h2>
     <br>
+    <p>If you have crypto on exchanges, you don't own that money. You are paying company to hold your crypto, it's not yours. </p>
+    <br>
     <li>Governments may have the authority to freeze or seize assets belonging to exchanges that operate within their jurisdiction.</li>
     <li>You may be at risk of tax theft, asset forfeiture theft, and civil theft.</li>
     <li>You may be at risk of exit theft.</li>
