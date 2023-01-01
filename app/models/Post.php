@@ -64,19 +64,35 @@ class Post
 
 
   
-  public function addComment($data)
-  {
-    $this->db->query('INSERT INTO comments (post_comment, username, page_id) VALUES(:post_comment, :username, :page_id)');
-    // Bind values
-    $this->db->bind(':post_comment', $data['post_comment']);
-    $this->db->bind(':username', $data['username']);
-    $this->db->bind(':page_id', $data['page_id']);
+  // public function addComment($data)
+  // {
+  //   $this->db->query('INSERT INTO comments (post_comment, username, page_id) VALUES(:post_comment, :username, :page_id)');
+  //   // Bind values
+  //   $this->db->bind(':post_comment', $data['post_comment']);
+  //   $this->db->bind(':username', $data['username']);
+  //   $this->db->bind(':page_id', $data['page_id']);
 
-    // Execute
-    if ($this->db->execute()) {
-      return true;
-    } else {
-      return false;
-    }
-  }
+  //   // Execute
+  //   if ($this->db->execute()) {
+  //     return true;
+  //   } else {
+  //     return false;
+  //   }
+  // }
+
+
+
+
+
+  // public function getSimilarPostsWhere_related_posts($related_posts)
+  // {
+  //   $this->db->query("SELECT * FROM posts WHERE related_posts = :related_posts ORDER BY created_at DESC");
+  //   $this->db->bind(':related_posts', $related_posts);
+
+  //   $results = $this->db->resultSet();
+
+  //   return $results;
+  // }
+
+  
 }

@@ -43,12 +43,12 @@
       }   
     }
    
-
+    // echo $data['pages']->related_posts;
 
   ?>
 
 
-  <?php if (isset($_SESSION['user_id'])) : ?>
+  <!-- <?php if (isset($_SESSION['user_id'])) : ?>
 
     <form action="<?php echo URLROOT; ?>/pages/add" method="post">
 
@@ -103,7 +103,7 @@
 
       </div>
 
-    <?php endforeach; ?>
+    <?php endforeach; ?> -->
   </div>
 
 

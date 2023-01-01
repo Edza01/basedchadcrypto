@@ -162,41 +162,41 @@ class Pages extends Controller
 
 
 
-  public function add()
-  {
-    if ($_SERVER['REQUEST_METHOD'] == 'POST') 
-    {
-      // Sanitize POST array
-      $_POST = filter_input_array(INPUT_POST, FILTER_SANITIZE_FULL_SPECIAL_CHARS);
+  // public function add()
+  // {
+  //   if ($_SERVER['REQUEST_METHOD'] == 'POST') 
+  //   {
+  //     // Sanitize POST array
+  //     $_POST = filter_input_array(INPUT_POST, FILTER_SANITIZE_FULL_SPECIAL_CHARS);
 
-      // Check if api return no error
+  //     // Check if api return no error
       
 
-        $data = [
-          'post_comment' => ucfirst(trim($_POST['post_comment'])),
-          'username' => $_SESSION['username'],
-          'page_id' => $_POST['page_id']
-        ];
+  //       $data = [
+  //         'post_comment' => ucfirst(trim($_POST['post_comment'])),
+  //         'username' => $_SESSION['username'],
+  //         'page_id' => $_POST['page_id']
+  //       ];
 
-        // Make sure no errors
-        if (!empty($_POST['post_comment']) && isset($_SESSION['user_id'])) {
-          // Validated
-          if ($this->postModel->addComment($data)) {
-            flash('post_message', 'Post Added');
+  //       // Make sure no errors
+  //       if (!empty($_POST['post_comment']) && isset($_SESSION['user_id'])) {
+  //         // Validated
+  //         if ($this->postModel->addComment($data)) {
+  //           flash('post_message', 'Post Added');
 
-            redirect($_SESSION['currenturl']);
-          } else {
-            die('Something went wrong');
-          }
-        } 
-        else
-        {
-          redirect($_SESSION['currenturl']);
-        }
+  //           redirect($_SESSION['currenturl']);
+  //         } else {
+  //           die('Something went wrong');
+  //         }
+  //       } 
+  //       else
+  //       {
+  //         redirect($_SESSION['currenturl']);
+  //       }
       
-    } 
+  //   } 
     
-  }
+  // }
 
 
   
