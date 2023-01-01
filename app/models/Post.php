@@ -85,6 +85,16 @@ class Post
       return $results;
   }
 
+
+
+
+
+
+
+
+
+
+
   public function getSimilarLearnPostsWhere_related_posts($related_posts, $id)
   {
     $this->db->query("SELECT * FROM learn WHERE related_posts = :related_posts AND id != :id ORDER BY id DESC LIMIT 6");
@@ -96,6 +106,17 @@ class Post
     return $results;
   }
 
+
+
+  public function getLearnById($id)
+  {
+    $this->db->query('SELECT * FROM learn WHERE id = :id');
+    $this->db->bind(':id', $id);
+
+    $row = $this->db->single();
+
+    return $row;
+  }
 
 
   

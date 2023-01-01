@@ -84,90 +84,7 @@ class Pages extends Controller
     $this->view('pages/tldr', $data);
   }
 
-  public function cryptowallets()
-  {
-    $data = [
-      'title' => 'crypto wallets'
-    ];
-
-    $this->view('pages/cryptowallets', $data);
-  }
-
-  public function whoacceptscrypto()
-  {
-    $data = [
-      'title' => 'crypto wallets'
-    ];
-
-    $this->view('pages/whoacceptscrypto', $data);
-  }
-
-  public function bestprivacycoin()
-  {
-    $data = [
-      'title' => 'crypto wallets'
-    ];
-
-    $this->view('pages/bestprivacycoin', $data);
-  }
   
-  public function cryptoscams()
-  {
-    $data = [
-      'title' => 'crypto scams'
-    ];
-
-    $this->view('pages/cryptoscams', $data);
-  }
-    
-  public function blockchain()
-  {
-    $data = [
-      'title' => 'blockchain'
-    ];
-
-    $this->view('pages/blockchain', $data);
-  }
-
-  public function blockhainvsbanks()
-  {
-    $data = [
-      'title' => 'blockhainvsbankss'
-    ];
-
-    $this->view('pages/blockhainvsbanks', $data);
-  }
-
-  public function whatisnft()
-  {
-    $data = [
-      'title' => 'whatisnft'
-    ];
-
-    $this->view('pages/whatisnft', $data);
-  }
-
-  public function cryptojacking()
-  {
-    $data = [
-      'title' => 'cryptojacking'
-    ];
-
-    $this->view('pages/cryptojacking', $data);
-  }
-
-  public function nextcryptocurrencytoexplode()
-  {
-    $data = [
-      'title' => 'cryptojacking'
-    ];
-
-    $this->view('pages/whatisethereum', $data);
-  }
-  
-  
-  
-
 
 
   public function add()
@@ -205,10 +122,26 @@ class Pages extends Controller
         {
           redirect($_SESSION['currenturl']);
         }
-      
     } 
-    
   }
+
+
+
+
+  public function showlearn($id)
+  {
+
+    $post = $this->postModel->getLearnById($id);
+    $related_posts = $this->postModel->getSimilarLearnPostsWhere_related_posts($post->related_posts, $id);
+
+    $data = [
+      'pages' => $post,
+      'related_posts' => $related_posts
+    ];
+
+    $this->view('pages/showlearn', $data);
+  }
+  
 
 
   

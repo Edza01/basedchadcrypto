@@ -10,7 +10,8 @@
 <div class="container learn-outer-container">
 <?php foreach ($data['learn'] as $post) : ?>
 
-    <a href="<?php echo URLROOT; ?><?php echo $post->url; ?>">
+    <a href="<?php echo URLROOT; ?>/pages/showlearn/<?php echo $post->id; ?>">
+    <!-- <a href="<?php echo URLROOT; ?><?php echo $post->url; ?>"> -->
         <div class="learn-container">
             <div class='learn-card'>
                 <div class='learn-box'>
