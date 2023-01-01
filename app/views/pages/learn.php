@@ -1,9 +1,12 @@
+<?php $title = "Exploring the Pros and Cons of Cryptocurrency" ?>
+<?php $meta =  "Learn about the benefits and drawbacks of using cryptocurrency. We cover best cryptocurrencies and help you decide if it's right for you."?>
+
 <?php require APPROOT . '/views/inc/header.php'; ?>
 
 <div class="container-fluid pages-main-header-container">
     <h1>Learn Crypto</h1>
     <hr class="page-hr">
-    <h2>Crypto Basics</h2>
+    <h2>Exploring the Pros and Cons of Cryptocurrency</h2>
 </div>
 
 

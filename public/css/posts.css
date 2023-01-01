@@ -110,6 +110,7 @@
   flex-direction: row;
   justify-content: space-around;
   align-items: center;
+  padding-top: 3rem;
 }
 
 .cards {

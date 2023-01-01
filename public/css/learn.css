@@ -60,3 +60,23 @@
     gap: 1rem;
     padding-top: 3rem;
 }
+
+@media only screen and (max-width: 1200px) {
+    .learn-outer-container {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 1rem;
+        padding-top: 3rem;
+    }
+    
+  }
+  
+  @media only screen and (max-width: 769px) {
+    .learn-outer-container {
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 1rem;
+        padding-top: 3rem;
+    }
+    
+  }

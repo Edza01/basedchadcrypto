@@ -64,17 +64,6 @@ class Pages extends Controller
   }
 
 
-
-  public function about()
-  {
-    $data = [
-      'title' => 'About Us',
-      'description' => 'App to share weather cast with other users'
-    ];
-
-    $this->view('pages/about', $data);
-  }
-
   public function tldr()
   {
     $data = [
@@ -83,8 +72,6 @@ class Pages extends Controller
 
     $this->view('pages/tldr', $data);
   }
-
-  
 
 
   public function add()

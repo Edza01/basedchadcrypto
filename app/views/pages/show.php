@@ -1,3 +1,7 @@
+<?php $title = $data['pages']->post_header; ?>
+<?php $meta = $small = $data['pages']->meta; ?>
+
+
 <?php require APPROOT . '/views/inc/header.php'; ?>
 
 
@@ -26,9 +30,9 @@
   
   <?php
     
-    echo '<div class="show-page-text">';
+    echo '<article class="show-page-text">';
     print_r($data['pages']->html);
-    echo '</div>';
+    echo '</article>';
    
   ?>
 
@@ -84,12 +88,8 @@
 
         </div>
     </div>
-  <!-- RELATED POSTS -->
 
-
-
-
-
+    <!-- RELATED POSTS -->
 
 
 
@@ -99,7 +99,7 @@
 
     <input type="hidden" name="page_id" value="<?php echo $data['pages']->id; ?>" />
 
-      <div class="form-group">
+      <div class="form-group show-comment-form-group">
         <label for="post_comment">Comment: <sup>*</sup></label>
         <textarea type="text" name="post_comment" class="open-post-textarea form-control form-control-lg <?php echo (!empty($data['post_comment_err'])) ? 'is-invalid' : ''; ?>" value="<?php echo $data['post_comment']; ?>"></textarea>
         <span class="invalid-feedback"><?php echo $data['post_comment_err']; ?></span>
@@ -114,7 +114,7 @@
   <?php else : ?>
 
 
-    <div class="jumbotron">
+    <div class="jumbotron mustlogin-err">
       <h1 class="display-5">You must login to comment!</h1>
       <p class="lead">Hey there! Want to join in on the conversation? Just log in and let your voice be heard! 
         Trust us, it's worth it. Plus, it'll give you the chance to share your witty remarks and thoughtful 

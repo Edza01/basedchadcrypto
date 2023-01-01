@@ -1,7 +1,10 @@
+<?php $title = "TLDR; Crypto for people in hurry" ?>
+<?php $meta =  "Frequently asked questions about cryptocurrency and their brief answers."?>
+
 <?php require APPROOT . '/views/inc/header.php'; ?>
 
 <div class="container-fluid pages-main-header-container">
-    <h1>Too Long Didn't Read</h1>
+    <h1>Too Long Didn't Read, Crypto for people in hurry</h1>
     <hr class="page-hr">
     <h2>Frequently asked questions about cryptocurrency and their brief answers</h2>
 </div>

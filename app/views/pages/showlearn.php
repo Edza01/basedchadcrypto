@@ -1,3 +1,6 @@
+<?php $title = $data['pages']->h3; ?>
+<?php $meta = $small = $data['pages']->meta; ?>
+
 <?php require APPROOT . '/views/inc/header.php'; ?>
 
 
@@ -9,9 +12,9 @@
 
     <img src='<?php echo URLROOT; ?>/public/postimages/<?php echo $data['pages']->image_name; ?>' alt='<?php echo $data['pages']->h3 ?>' class='open-post-image'> 
 
-    <div class='container learn-pagination'>
+    <article class='container learn-pagination'>
         <?php print_r($data['pages']->html); ?>
-    </div>
+    </article>
 
 
 

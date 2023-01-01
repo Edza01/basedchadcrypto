@@ -101,23 +101,18 @@
 
 
   <div class="jumbotron">
-    <h1 class="display-4">Informative crypto blog</h1>
-    <p class="lead main-text">Welcome to our informative crypto blog! Here you will find a wealth of 
-      information and resources on all things cryptocurrency. Whether you are new 
-      to the world of crypto or an experienced investor, we have something for you.
-      On our blog, you will find articles and guides on topics such as how to buy and sell 
-      cryptocurrencies, how to securely store your digital assets, and the latest news and developments 
-      in the world of crypto. We also offer in-depth reviews of different cryptocurrency exchanges and wallets, 
-      as well as analysis and commentary on the market and its trends.
-      In addition to our written content, we also offer a range of interactive resources, 
-      such as calculators, to help you learn more about crypto and make informed decisions about your investments.
-      So if you are looking for a one-stop-shop for all your crypto needs, look no further! Join our community 
-      and stay up to date with the latest in the world of cryptocurrency.
+    <h1 class="display-4">Based Chad Crypto</h1>
+    <p class="lead main-text">
+      Welcome to our platform, where you can learn about cryptocurrency without censorship or bias. 
+      Here, you'll find unbiased and uncensored information about digital currencies. 
+      Our goal is to provide a safe and open space for anyone looking to understand more 
+      about the exciting world of cryptocurrency. Whether you're a beginner or an experienced trader, 
+      we've got the resources and information you need to make informed decisions. 
+      So join us and start your journey to becoming a cryptocurrency expert today!
     </p>
     <hr class="my-4">
     <p class="main-text">
-      Learn about cryptocurrency with our educational blog. Stay up to date with the latest news 
-      and trends and use our interactive resources to make informed investment decisions.
+      No censorship or bias here.
     </p>
   </div>
 

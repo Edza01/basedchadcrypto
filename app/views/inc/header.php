@@ -16,7 +16,22 @@
   <link rel="stylesheet" href="<?php echo URLROOT; ?>/public/css/mainpage.css">
   <link rel="stylesheet" href="<?php echo URLROOT; ?>/public/css/tldr.css">
   <link rel="stylesheet" href="<?php echo URLROOT; ?>/public/css/learn.css">
-  <title><?php echo SITENAME; ?></title>
+
+
+  <?php 
+    if (!isset($title)) {
+      $title = 'Honest Insights on Digital Currency - BasedChadCrypto';
+    }
+ 
+    if (!isset($meta)) {
+      $meta = 'Stay informed with honest insights on digital currency and the latest trends in the crypto industry';
+    }
+  ?>
+  <title><?php echo $title; ?></title>
+
+
+  <meta name="description" content="<?php echo $meta; ?> - BasedChadCrypto'">
+
 </head>
 
 <body>
