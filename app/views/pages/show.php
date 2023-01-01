@@ -1,14 +1,19 @@
 <?php require APPROOT . '/views/inc/header.php'; ?>
 
+
+
+
+
+
 <?php flash('post_message'); ?>
 
 
 <div class='container'>
-  <!-- <button onclick="myFunction()" class="btn btn-light"><i class="fa fa-backward"></i> Back</button> -->
+
 
 
   <br>
-  <!-- <h1 class='open-post-h1'><?php echo $data['pages']->image_name; ?></h1> -->
+
 
   <?php $full_size_img = $data['pages']->image_name; ?>
   <img src='<?php echo URLROOT; ?>/public/img/<?php echo $full_size_img ?>' alt='<?php echo $full_size_img ?>' class='open-post-image'> 
@@ -17,7 +22,7 @@
 
 
 
-  <!-- <?php echo $data['pages']->id; ?> -->
+
   
   <?php
     // file_get_contents() may be dangerous if you use user supplied data as a parameter and print its output. 
@@ -43,12 +48,76 @@
       }   
     }
    
-    // echo $data['pages']->related_posts;
 
+    
+
+    // echo $_SESSION['current-category'];
+
+    // print_r($data['related_posts']);
   ?>
 
 
-  <!-- <?php if (isset($_SESSION['user_id'])) : ?>
+
+
+
+    <!-- RELATED POSTS -->
+
+    <div>
+        <h2 class="masonry-main-header">Related Posts</h2>
+        <div class="show-masonry">
+
+          <?php foreach ($data['related_posts'] as $post) : ?>
+
+            <a class='article-link' href="<?php echo URLROOT; ?>/pages/show/<?php echo $post->id; ?>">
+              <div class="card">
+                <div class="show-card-header">
+                  <img class='masonry-card-image' src='<?php echo URLROOT; ?>/public/img/<?php echo $post->image_name; ?>' alt='<?php echo $post->image_name; ?>'>
+                </div>
+                <div class="card-body">
+                  <!-- <span class="card-body-tag-technology"><?php echo $post->tag; ?></span> -->
+
+                  <?php 
+                    if (isset($post->tag))
+                    {
+                      echo '<span class="card-body-tag-technology" style="background-color:' . getTagColor($post->tag) .'">'. $post->tag .'</span>';
+                    }
+                  ?>
+
+                  <h4 class="card-body-header">
+                    <?php echo $post->post_header; ?>
+                  </h4>
+                  
+                  <div class='article-info'>
+                    
+                    <div class='user-info'>  
+                      <?php 
+                        $sql_date = new DateTime($post->created_at);
+                        $correct_date = $sql_date->format('Y-m-d');
+                      ?>
+                      
+                      <p><?php echo timeDateToTimeAgo($correct_date); ?></p>
+                    </div>
+
+                  </div>
+                </div>
+              </div>
+              
+            </a>
+
+          <?php endforeach; ?>
+
+        </div>
+    </div>
+  <!-- RELATED POSTS -->
+
+
+
+
+
+
+
+
+  <?php if (isset($_SESSION['user_id'])) : ?>
 
     <form action="<?php echo URLROOT; ?>/pages/add" method="post">
 
@@ -103,7 +172,7 @@
 
       </div>
 
-    <?php endforeach; ?> -->
+    <?php endforeach; ?>
   </div>
 
 

@@ -9,7 +9,18 @@
   
 
 
-  <?php require APPROOT . '/views/inc/aboutus.php'; ?>
+ 
+
+  <?php if(!isset($_GET['page']) || $_GET['page'] == 0) : ?>
+
+    <?php require APPROOT . '/views/inc/aboutus.php'; ?>
+
+    <?php else : ?>
+    
+  <?php endif; ?>
+
+
+
 
   <div class="posts-wrapper">
 
@@ -29,7 +40,7 @@
 
           <a class='article-link' href="<?php echo URLROOT; ?>/pages/show/<?php echo $post->id; ?>">
             <div class="card">
-              <div class="card-header">
+              <div class="show-card-header">
                 <img class='masonry-card-image' src='public/img/<?php echo $post->image_name; ?>' alt='<?php echo $post->image_name; ?>'>
               </div>
               <div class="card-body">
@@ -69,6 +80,14 @@
     </div>
 
   </div>
+
+
+  
+  
+
+  
+
+
 
 
   <?php require APPROOT . '/views/inc/pagination.php'; ?>

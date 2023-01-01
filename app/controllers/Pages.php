@@ -35,12 +35,16 @@ class Pages extends Controller
 
   public function show($id)
   {
+
     $post = $this->postModel->getPostById($id);
     $comments = $this->postModel->getCommentsFromPostWhere_page_id($id);
-
+    $related_posts = $this->postModel->getSimilarPostsWhere_related_posts($post->related_posts, $id);
+    
+    
     $data = [
       'pages' => $post,
-      'comments' => $comments
+      'comments' => $comments,
+      'related_posts' => $related_posts
     ];
 
     $this->view('pages/show', $data);
@@ -162,41 +166,45 @@ class Pages extends Controller
 
 
 
-  // public function add()
-  // {
-  //   if ($_SERVER['REQUEST_METHOD'] == 'POST') 
-  //   {
-  //     // Sanitize POST array
-  //     $_POST = filter_input_array(INPUT_POST, FILTER_SANITIZE_FULL_SPECIAL_CHARS);
+  public function add()
+  {
+    if ($_SERVER['REQUEST_METHOD'] == 'POST') 
+    {
+      // Sanitize POST array
+      $_POST = filter_input_array(INPUT_POST, FILTER_SANITIZE_FULL_SPECIAL_CHARS);
 
-  //     // Check if api return no error
+      // Check if api return no error
+
+        if (!is_numeric($_POST['page_id']))
+        {
+          die('Something went wrong');
+        }
+
+        $data = [
+          'post_comment' => ucfirst(trim($_POST['post_comment'])),
+          'username' => $_SESSION['username'],
+          'page_id' => $_POST['page_id']
+        ];
+
+        // Make sure no errors
+        if (!empty($_POST['post_comment']) && isset($_SESSION['user_id'])) {
+          // Validated
+          if ($this->postModel->addComment($data)) {
+            flash('post_message', 'Post Added');
+
+            redirect($_SESSION['currenturl']);
+          } else {
+            die('Something went wrong');
+          }
+        } 
+        else
+        {
+          redirect($_SESSION['currenturl']);
+        }
       
-
-  //       $data = [
-  //         'post_comment' => ucfirst(trim($_POST['post_comment'])),
-  //         'username' => $_SESSION['username'],
-  //         'page_id' => $_POST['page_id']
-  //       ];
-
-  //       // Make sure no errors
-  //       if (!empty($_POST['post_comment']) && isset($_SESSION['user_id'])) {
-  //         // Validated
-  //         if ($this->postModel->addComment($data)) {
-  //           flash('post_message', 'Post Added');
-
-  //           redirect($_SESSION['currenturl']);
-  //         } else {
-  //           die('Something went wrong');
-  //         }
-  //       } 
-  //       else
-  //       {
-  //         redirect($_SESSION['currenturl']);
-  //       }
-      
-  //   } 
+    } 
     
-  // }
+  }
 
 
   
