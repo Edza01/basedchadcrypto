@@ -46,6 +46,8 @@ class Pages extends Controller
     $this->view('pages/show', $data);
   }
 
+
+
   public function about()
   {
     $data = [
