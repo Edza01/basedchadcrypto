@@ -14,7 +14,7 @@
     <div class='categories-card'>
         <div class='categories-box'>
             <div class='categories-content'>
-                <i class="fa-solid fa-person-circle-question fa-2xl"></i>
+                <i class="fa-solid fa-medal fa-2xl"></i>
                 <h3>Best Privacy Coin</h3>
                 <p>Privacy coins are undervalued in the cryptocurrency space.</p>
                 

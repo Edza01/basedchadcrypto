@@ -40,7 +40,6 @@ class Pages extends Controller
     $comments = $this->postModel->getCommentsFromPostWhere_page_id($id);
     $related_posts = $this->postModel->getSimilarPostsWhere_related_posts($post->related_posts, $id);
     
-    
     $data = [
       'pages' => $post,
       'comments' => $comments,
@@ -50,7 +49,6 @@ class Pages extends Controller
     $this->view('pages/show', $data);
   }
 
-  
 
   public function learn()
   {

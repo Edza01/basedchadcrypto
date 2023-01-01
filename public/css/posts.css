@@ -188,13 +188,7 @@
   margin-bottom: 15px;
 }
 
-.fa-chart-line,
-.fa-wallet,
-.fa-person-chalkboard,
-.fa-right-left,
-.fa-calculator,
-.fa-person-circle-question,
-.fa-money-bills {
+i {
   color: white;
   padding: 1.5rem;
 }

@@ -25,35 +25,11 @@
 
   
   <?php
-    // file_get_contents() may be dangerous if you use user supplied data as a parameter and print its output. 
-    // A malicious user may then use e.g. /etc/passwd to read all your server's user names. Or, he/she could use '..' 
-    // as part of the file name to access files even if you prepend the name with an allowed path (e.g. "../../etc/passwd")
-    // To prevent that from happening, you should always check user given values for validity, for example, 
-    // that a file name or path is in an expected part of your file system, and so accessing only files that you want 
-    // the user to access. PHP has a function to make relative paths (or paths that contains symbolic links) 'real': realpath().
-    // After making a path 'real' you can check the path if it is in the 
-    // expected part of the file system and then safely use it for file_get_contents().
-
     
-    if (is_numeric($data['pages']->id ))
-    {
-      $wanted = $_GET['path'];
-      $real = realpath(APPROOT.'/postcontent/'.$data['pages']->id.'.php' . $wanted);
-      if (strpos($real, APPROOT.'/postcontent/'.$data['pages']->id.'.php') === 0) {
-        echo '<div class="show-page-text">';
-        echo file_get_contents($real);
-        echo '</div>';
-      } else {
-        echo' not allowed to access this file';
-      }   
-    }
+    echo '<div class="show-page-text">';
+    print_r($data['pages']->html);
+    echo '</div>';
    
-
-    
-
-    // echo $_SESSION['current-category'];
-
-    // print_r($data['related_posts']);
   ?>
 
 
