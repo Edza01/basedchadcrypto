@@ -76,7 +76,16 @@ class Post
     return $results;
   }
 
-  
+  public function getLearnPosts()
+  {
+      $this->db->query('SELECT * FROM learn ORDER BY id');
+
+      $results = $this->db->resultSet();
+
+      return $results;
+  }
+
+
 
   
 }

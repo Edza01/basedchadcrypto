@@ -50,6 +50,21 @@ class Pages extends Controller
     $this->view('pages/show', $data);
   }
 
+  
+
+  public function learn()
+  {
+
+    $post = $this->postModel->getLearnPosts();
+    
+    $data = [
+      'title' => 'learn',
+      'learn' => $post
+    ];
+
+    $this->view('pages/learn', $data);
+  }
+
 
 
   public function about()
@@ -69,15 +84,6 @@ class Pages extends Controller
     ];
 
     $this->view('pages/tldr', $data);
-  }
-
-  public function learn()
-  {
-    $data = [
-      'title' => 'learn'
-    ];
-
-    $this->view('pages/learn', $data);
   }
 
   public function cryptowallets()
