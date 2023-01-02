@@ -8,7 +8,7 @@
   // App Root
   define('APPROOT', dirname(dirname(__FILE__)));
   // URL Root
-  define('URLROOT', 'https://localhost/basechadcrypto');
+  define('URLROOT', 'https://localhost/basedchadcrypto');
   // Site Name
   define('SITENAME', 'BasedChadCrypto');
   // App Version

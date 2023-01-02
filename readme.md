@@ -67,3 +67,12 @@ https://stackoverflow.com/questions/67923678/is-the-expect-ct-http-header-still-
 https://github.com/google/certificate-transparency-community-site/blob/master/docs/google/getting-started.md
 
 https://certificate.transparency.dev/howctworks/
+
+
+https://www.crybit.com/phpinfo/
+disable_functions = "show_source, system, shell_exec, passthru, exec, phpinfo, popen, proc_open, allow_url_fopen"
+
+https://stackoverflow.com/questions/97984/how-to-secure-database-passwords-in-php
+
+
+https://www.socialmediatoday.com/news/8-of-the-most-important-html-tags-for-seo/574987/

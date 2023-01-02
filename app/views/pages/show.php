@@ -27,69 +27,84 @@
 
 
 
-  
+
   <?php
-    
-    echo '<article class="show-page-text">';
-    print_r($data['pages']->html);
-    echo '</article>';
-   
+
+  echo '<article class="show-page-text">';
+  print_r($data['pages']->html);
+  echo '</article>';
+
   ?>
 
 
 
 
 
-    <!-- RELATED POSTS -->
+  <!-- RELATED POSTS -->
+
+  <?php if ($data['related_posts']) : ?>
 
     <div>
-        <h2 class="masonry-main-header">Related Posts</h2>
-        <div class="show-masonry">
+      <h2 class="masonry-main-header">Related Posts</h2>
+      <div class="show-masonry">
 
-          <?php foreach ($data['related_posts'] as $post) : ?>
+        <?php foreach ($data['related_posts'] as $post) : ?>
 
-            <a class='article-link' href="<?php echo URLROOT; ?>/pages/show/<?php echo $post->id; ?>">
-              <div class="card">
-                <div class="show-card-header">
-                  <img class='masonry-card-image' src='<?php echo URLROOT; ?>/public/img/<?php echo $post->image_name; ?>' alt='<?php echo $post->image_name; ?>'>
-                </div>
-                <div class="card-body">
-                  <!-- <span class="card-body-tag-technology"><?php echo $post->tag; ?></span> -->
+          <a class='article-link' href="<?php echo URLROOT; ?>/pages/show/<?php echo $post->id; ?>">
+            <div class="card">
+              <div class="show-card-header">
+                <img class='masonry-card-image' src='<?php echo URLROOT; ?>/public/img/<?php echo $post->image_name; ?>' alt='<?php echo $post->image_name; ?>'>
+              </div>
+              <div class="card-body">
+                <!-- <span class="card-body-tag-technology"><?php echo $post->tag; ?></span> -->
 
-                  <?php 
-                    if (isset($post->tag))
-                    {
-                      echo '<span class="card-body-tag-technology" style="background-color:' . getTagColor($post->tag) .'">'. $post->tag .'</span>';
-                    }
-                  ?>
+                <?php
+                if (isset($post->tag)) {
+                  echo '<span class="card-body-tag-technology" style="background-color:' . getTagColor($post->tag) . '">' . $post->tag . '</span>';
+                }
+                ?>
 
-                  <h4 class="card-body-header">
-                    <?php echo $post->post_header; ?>
-                  </h4>
-                  
-                  <div class='article-info'>
-                    
-                    <div class='user-info'>  
-                      <?php 
-                        $sql_date = new DateTime($post->created_at);
-                        $correct_date = $sql_date->format('Y-m-d');
-                      ?>
-                      
-                      <p><?php echo timeDateToTimeAgo($correct_date); ?></p>
-                    </div>
+                <h4 class="card-body-header">
+                  <?php echo $post->post_header; ?>
+                </h4>
 
+                <div class='article-info'>
+
+                  <div class='user-info'>
+                    <?php
+                    $sql_date = new DateTime($post->created_at);
+                    $correct_date = $sql_date->format('Y-m-d');
+                    ?>
+
+                    <p><?php echo timeDateToTimeAgo($correct_date); ?></p>
                   </div>
+
                 </div>
               </div>
-              
-            </a>
+            </div>
 
-          <?php endforeach; ?>
+          </a>
 
-        </div>
+        <?php endforeach; ?>
+
+      </div>
     </div>
 
-    <!-- RELATED POSTS -->
+  <?php else : ?>
+
+  <?php endif; ?>
+
+
+  <!-- RELATED POSTS -->
+
+
+
+
+
+
+
+
+
 
 
 
@@ -97,7 +112,7 @@
 
     <form action="<?php echo URLROOT; ?>/pages/add" method="post">
 
-    <input type="hidden" name="page_id" value="<?php echo $data['pages']->id; ?>" />
+      <input type="hidden" name="page_id" value="<?php echo $data['pages']->id; ?>" />
 
       <div class="form-group show-comment-form-group">
         <label for="post_comment">Comment: <sup>*</sup></label>
@@ -108,7 +123,7 @@
       <div class="open-post-button-container">
         <input type="submit" class="open-post-button" value="Submit">
       </div>
-      
+
     </form>
 
   <?php else : ?>
@@ -116,8 +131,8 @@
 
     <div class="jumbotron mustlogin-err">
       <h1 class="display-5">You must login to comment!</h1>
-      <p class="lead">Hey there! Want to join in on the conversation? Just log in and let your voice be heard! 
-        Trust us, it's worth it. Plus, it'll give you the chance to share your witty remarks and thoughtful 
+      <p class="lead">Hey there! Want to join in on the conversation? Just log in and let your voice be heard!
+        Trust us, it's worth it. Plus, it'll give you the chance to share your witty remarks and thoughtful
         insights with the rest of the internet. Go ahead, give it a try! You might just become the star commenter of the day.</p>
       <hr class="my-4">
       <p>Hey there! Don't have an account yet? No problem!</p>
@@ -135,8 +150,8 @@
       <div class="card card-body mb-3 posts-container">
 
         <?php
-          $dt = new DateTime($post->date);
-          $year_month_day = $dt->format('Y-m-d');
+        $dt = new DateTime($post->date);
+        $year_month_day = $dt->format('Y-m-d');
         ?>
 
         <div class="inline-comment-data">
@@ -166,7 +181,7 @@
 
 
 
-  
+
 
 </div>
 
