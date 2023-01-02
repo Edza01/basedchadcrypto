@@ -10,6 +10,6 @@
   // URL Root
   define('URLROOT', 'https://localhost/basedchadcrypto');
   // Site Name
-  define('SITENAME', 'BasedChadCrypto');
+  define('SITENAME', 'geekawow');
   // App Version
   define('APPVERSION', '1.0.0');
