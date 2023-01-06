@@ -18,7 +18,6 @@
 
 
 
-
     <!-- RELATED POSTS -->
     <?php if ($data['related_posts']) : ?>
 
