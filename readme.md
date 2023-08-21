@@ -1,3 +1,6 @@
+FULL NEWSLETTER WEBSITE, admin login, posts, comments and more
+
+
 Launch with xampp
 
 Edit there : 
