@@ -1,5 +1,4 @@
-FULL NEWSLETTER WEBSITE, admin login, posts, comments and more
-
+Comprehensive newsletter website featuring admin login, articles, comments, and more.
 
 Launch with xampp
 
